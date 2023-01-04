@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C89F6682421CCD19445730F7 /* Pods_OdiazEcommerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BEE3CDBC7F24AFCFC7FE2C /* Pods_OdiazEcommerce.framework */; };
+		EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */; };
+		EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */; };
+		EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */; };
+		EF7D60A0295CAAA8006512E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D609F295CAAA8006512E8 /* AppDelegate.swift */; };
+		EF7D60A2295CAAA8006512E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60A1295CAAA8006512E8 /* SceneDelegate.swift */; };
+		EF7D60A4295CAAA8006512E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60A3295CAAA8006512E8 /* ViewController.swift */; };
+		EF7D60A7295CAAA8006512E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7D60A5295CAAA8006512E8 /* Main.storyboard */; };
+		EF7D60AA295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60A8295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld */; };
+		EF7D60AC295CAAAC006512E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7D60AB295CAAAC006512E8 /* Assets.xcassets */; };
+		EF7D60AF295CAAAC006512E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7D60AD295CAAAC006512E8 /* LaunchScreen.storyboard */; };
+		EF7D60BB295CAB59006512E8 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60BA295CAB59006512E8 /* DB.swift */; };
+		EF7D60BD295CF45B006512E8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60BC295CF45B006512E8 /* Result.swift */; };
+		EF7D60BF295CF4A2006512E8 /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60BE295CF4A2006512E8 /* Producto.swift */; };
+		EF7D60C1295CF53E006512E8 /* ProductoForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C0295CF53E006512E8 /* ProductoForm.swift */; };
+		EF7D60C3295CF5EB006512E8 /* ProductoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C2295CF5EB006512E8 /* ProductoViewModel.swift */; };
+		EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C4295D1687006512E8 /* Proveedor.swift */; };
+		EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C6295D16D0006512E8 /* Departamento.swift */; };
+		EF7D60C9295D16E6006512E8 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C8295D16E6006512E8 /* Area.swift */; };
+		EFD862152964AD15006F7DCA /* User.webp in Resources */ = {isa = PBXBuildFile; fileRef = EFD862142964AD15006F7DCA /* User.webp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8E1F956B53AFFECC12D06385 /* Pods-OdiazEcommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OdiazEcommerce.debug.xcconfig"; path = "Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce.debug.xcconfig"; sourceTree = "<group>"; };
+		931EED727AB836862B586E2C /* Pods-OdiazEcommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OdiazEcommerce.release.xcconfig"; path = "Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce.release.xcconfig"; sourceTree = "<group>"; };
+		C5BEE3CDBC7F24AFCFC7FE2C /* Pods_OdiazEcommerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OdiazEcommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
+		EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoTableViewCell.swift; sourceTree = "<group>"; };
+		EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoTableViewCell.xib; sourceTree = "<group>"; };
+		EF7D609C295CAAA8006512E8 /* OdiazEcommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OdiazEcommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7D609F295CAAA8006512E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF7D60A1295CAAA8006512E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF7D60A3295CAAA8006512E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF7D60A6295CAAA8006512E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF7D60A9295CAAA8006512E8 /* OdiazEcommerce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OdiazEcommerce.xcdatamodel; sourceTree = "<group>"; };
+		EF7D60AB295CAAAC006512E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF7D60AE295CAAAC006512E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF7D60B0295CAAAC006512E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF7D60BA295CAB59006512E8 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		EF7D60BC295CF45B006512E8 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EF7D60BE295CF4A2006512E8 /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		EF7D60C0295CF53E006512E8 /* ProductoForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoForm.swift; sourceTree = "<group>"; };
+		EF7D60C2295CF5EB006512E8 /* ProductoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoViewModel.swift; sourceTree = "<group>"; };
+		EF7D60C4295D1687006512E8 /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
+		EF7D60C6295D16D0006512E8 /* Departamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departamento.swift; sourceTree = "<group>"; };
+		EF7D60C8295D16E6006512E8 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		EFD862142964AD15006F7DCA /* User.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = User.webp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF7D6099295CAAA8006512E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C89F6682421CCD19445730F7 /* Pods_OdiazEcommerce.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B5C619AB5E453A13F4B973A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E1F956B53AFFECC12D06385 /* Pods-OdiazEcommerce.debug.xcconfig */,
+				931EED727AB836862B586E2C /* Pods-OdiazEcommerce.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8FFC8D672F21082E4F9B9297 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5BEE3CDBC7F24AFCFC7FE2C /* Pods_OdiazEcommerce.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF7D6093295CAAA8006512E8 = {
+			isa = PBXGroup;
+			children = (
+				EF7D60B9295CAB22006512E8 /* Controller */,
+				EF7D60B8295CAB0F006512E8 /* View */,
+				EF7D60B7295CAAEB006512E8 /* ViewModel */,
+				EF7D60B6295CAADB006512E8 /* Model */,
+				EF7D609E295CAAA8006512E8 /* OdiazEcommerce */,
+				EF7D609D295CAAA8006512E8 /* Products */,
+				7B5C619AB5E453A13F4B973A /* Pods */,
+				8FFC8D672F21082E4F9B9297 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7D609D295CAAA8006512E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D609C295CAAA8006512E8 /* OdiazEcommerce.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7D609E295CAAA8006512E8 /* OdiazEcommerce */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D609F295CAAA8006512E8 /* AppDelegate.swift */,
+				EF7D60A1295CAAA8006512E8 /* SceneDelegate.swift */,
+				EF7D60A3295CAAA8006512E8 /* ViewController.swift */,
+				EF7D60AB295CAAAC006512E8 /* Assets.xcassets */,
+				EF7D60B0295CAAAC006512E8 /* Info.plist */,
+				EF7D60A8295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld */,
+			);
+			path = OdiazEcommerce;
+			sourceTree = "<group>";
+		};
+		EF7D60B6295CAADB006512E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D60BC295CF45B006512E8 /* Result.swift */,
+				EF7D60BE295CF4A2006512E8 /* Producto.swift */,
+				EF7D60C4295D1687006512E8 /* Proveedor.swift */,
+				EF7D60C6295D16D0006512E8 /* Departamento.swift */,
+				EF7D60C8295D16E6006512E8 /* Area.swift */,
+			);
+			name = Model;
+			path = OdiazEcommerce/Model;
+			sourceTree = "<group>";
+		};
+		EF7D60B7295CAAEB006512E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D60BA295CAB59006512E8 /* DB.swift */,
+				EF7D60C2295CF5EB006512E8 /* ProductoViewModel.swift */,
+			);
+			name = ViewModel;
+			path = OdiazEcommerce/ViewModel;
+			sourceTree = "<group>";
+		};
+		EF7D60B8295CAB0F006512E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */,
+				EFD862142964AD15006F7DCA /* User.webp */,
+				EF7D60AD295CAAAC006512E8 /* LaunchScreen.storyboard */,
+				EF7D60A5295CAAA8006512E8 /* Main.storyboard */,
+			);
+			name = View;
+			path = OdiazEcommerce/View;
+			sourceTree = "<group>";
+		};
+		EF7D60B9295CAB22006512E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */,
+				EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */,
+				EF7D60C0295CF53E006512E8 /* ProductoForm.swift */,
+			);
+			name = Controller;
+			path = OdiazEcommerce/Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF7D609B295CAAA8006512E8 /* OdiazEcommerce */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7D60B3295CAAAC006512E8 /* Build configuration list for PBXNativeTarget "OdiazEcommerce" */;
+			buildPhases = (
+				6C0882AB801A31977D9C7843 /* [CP] Check Pods Manifest.lock */,
+				EF7D6098295CAAA8006512E8 /* Sources */,
+				EF7D6099295CAAA8006512E8 /* Frameworks */,
+				EF7D609A295CAAA8006512E8 /* Resources */,
+				152E2B8C26D6271EA0A62B77 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OdiazEcommerce;
+			productName = OdiazEcommerce;
+			productReference = EF7D609C295CAAA8006512E8 /* OdiazEcommerce.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7D6094295CAAA8006512E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EF7D609B295CAAA8006512E8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = EF7D6097295CAAA8006512E8 /* Build configuration list for PBXProject "OdiazEcommerce" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7D6093295CAAA8006512E8;
+			productRefGroup = EF7D609D295CAAA8006512E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF7D609B295CAAA8006512E8 /* OdiazEcommerce */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF7D609A295CAAA8006512E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7D60AF295CAAAC006512E8 /* LaunchScreen.storyboard in Resources */,
+				EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */,
+				EF7D60AC295CAAAC006512E8 /* Assets.xcassets in Resources */,
+				EFD862152964AD15006F7DCA /* User.webp in Resources */,
+				EF7D60A7295CAAA8006512E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		152E2B8C26D6271EA0A62B77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C0882AB801A31977D9C7843 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OdiazEcommerce-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF7D6098295CAAA8006512E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7D60BD295CF45B006512E8 /* Result.swift in Sources */,
+				EF7D60C1295CF53E006512E8 /* ProductoForm.swift in Sources */,
+				EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */,
+				EF7D60A4295CAAA8006512E8 /* ViewController.swift in Sources */,
+				EF7D60BF295CF4A2006512E8 /* Producto.swift in Sources */,
+				EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */,
+				EF7D60A0295CAAA8006512E8 /* AppDelegate.swift in Sources */,
+				EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */,
+				EF7D60AA295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld in Sources */,
+				EF7D60BB295CAB59006512E8 /* DB.swift in Sources */,
+				EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */,
+				EF7D60C3295CF5EB006512E8 /* ProductoViewModel.swift in Sources */,
+				EF7D60C9295D16E6006512E8 /* Area.swift in Sources */,
+				EF7D60A2295CAAA8006512E8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF7D60A5295CAAA8006512E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7D60A6295CAAA8006512E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF7D60AD295CAAAC006512E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7D60AE295CAAAC006512E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF7D60B1295CAAAC006512E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF7D60B2295CAAAC006512E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF7D60B4295CAAAC006512E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E1F956B53AFFECC12D06385 /* Pods-OdiazEcommerce.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29MPKB7M6L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OdiazEcommerce/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digi01.OdiazEcommerce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF7D60B5295CAAAC006512E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931EED727AB836862B586E2C /* Pods-OdiazEcommerce.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29MPKB7M6L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OdiazEcommerce/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digi01.OdiazEcommerce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF7D6097295CAAA8006512E8 /* Build configuration list for PBXProject "OdiazEcommerce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7D60B1295CAAAC006512E8 /* Debug */,
+				EF7D60B2295CAAAC006512E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7D60B3295CAAAC006512E8 /* Build configuration list for PBXNativeTarget "OdiazEcommerce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7D60B4295CAAAC006512E8 /* Debug */,
+				EF7D60B5295CAAAC006512E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF7D60A8295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF7D60A9295CAAA8006512E8 /* OdiazEcommerce.xcdatamodel */,
+			);
+			currentVersion = EF7D60A9295CAAA8006512E8 /* OdiazEcommerce.xcdatamodel */;
+			path = OdiazEcommerce.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF7D6094295CAAA8006512E8 /* Project object */;
+}
