@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SwipeCellKit
 
 class GetAllTableViewController: UITableViewController {
     
     let productoViewModel = ProductoViewModel()
     var productos = [Producto]()
+    var idProducto : Int = 0
 
     override func viewDidLoad() {
         navigationController?.isNavigationBarHidden = false
@@ -92,9 +94,9 @@ class GetAllTableViewController: UITableViewController {
         cell.PrecioUnitarioField.text = String(productos[indexPath.row].PrecioUnitario)
         cell.StockField.text = String(productos[indexPath.row].Stock)
         cell.DescripcionField.text = productos[indexPath.row].Descripcion
-        productos.Proveedor = Proveedor()
-        cell.ProveedorField.text = String(productos[indexPath.row].IdProveedor)
-        cell.DepartamentoField.text = String(productos[indexPath.row].IdDepartamento)
+        //productos.Proveedor = Proveedor()
+        //cell.ProveedorField.text = String(productos[indexPath.row].IdProveedor)
+        //cell.DepartamentoField.text = String(productos[indexPath.row].IdDepartamento)
         //cell.ImageUser.image = UIImage(named: "User")
 
         return cell
@@ -146,4 +148,52 @@ class GetAllTableViewController: UITableViewController {
     }
     */
 
+}
+
+
+extension GetAllTableViewController : SwipeTableViewCellDelegate{
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeCellKit.SwipeActionsOrientation) -> [SwipeCellKit.SwipeAction]? {
+        guard orientation == .right else { return nil }
+
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+           
+            let idProducto = self.productos[indexPath.row].IdProducto
+            //print("La Celda es el indice: \(indexPath.row) y el IdProducto es: \(idProducto)")
+            let result = self.productoViewModel.Delete(IdProducto: Int32(idProducto))
+            if result.Correct{
+                //Mensaje de Confirmacion
+                let alert = UIAlertController(title: "Confirmación", message: "Producto eliminado correctamente"+result.ErrorMessage, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "Cerrar", style: .default)
+                
+                let Aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: { action in
+                  })
+                
+                alert.addAction(ok)
+                alert.addAction(Aceptar)
+                self.present(alert,animated: false)
+            }
+            else{
+                let alert = UIAlertController(title: "Error", message: "El produto no se elimino correctamente " + result.ErrorMessage, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "Cerrar", style: .default)
+                
+                let Aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: { action in
+                  })
+                
+                alert.addAction(ok)
+                alert.addAction(Aceptar)
+                self.present(alert,animated: false)
+            }
+            self.loadData()
+        }
+
+        deleteAction.image = UIImage(named: "delete")
+
+        return [deleteAction]
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UpdateSegues"{
+            let productoForm = segue.destination as! ProductoForm
+            productoForm.IdProducto = self.idProducto
+        }
+    }
 }

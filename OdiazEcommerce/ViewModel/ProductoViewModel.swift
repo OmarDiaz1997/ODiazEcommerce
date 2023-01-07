@@ -58,7 +58,8 @@ class ProductoViewModel {
                 sqlite3_bind_text(statement, 4, (producto.Descripcion as NSString).utf8String, -1, nil)
                 sqlite3_bind_int(statement, 5, Int32(producto.Proveedor!.IdProveedor))
                 sqlite3_bind_int(statement, 6, Int32(producto.Departamento!.IdDepartamento))
-                sqlite3_bind_int(statement, 7, Int32(producto.IdProducto))
+                sqlite3_bind_text(statement, 7, (producto.Imagen as NSString).utf8String, -1, nil)
+                sqlite3_bind_int(statement, 8, Int32(producto.IdProducto))
                 
                 if sqlite3_step(statement) == SQLITE_DONE{
                     result.Correct = true

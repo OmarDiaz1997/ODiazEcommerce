@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class ProductoTableViewCell: UITableViewCell {
+class ProductoTableViewCell: SwipeTableViewCell {
     @IBOutlet weak var IdProductolbl: UILabel!
     @IBOutlet weak var NombreField: UILabel!
     @IBOutlet weak var PrecioUnitarioField: UILabel!

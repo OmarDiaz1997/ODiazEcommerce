@@ -26,6 +26,8 @@
 		EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C4295D1687006512E8 /* Proveedor.swift */; };
 		EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C6295D16D0006512E8 /* Departamento.swift */; };
 		EF7D60C9295D16E6006512E8 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C8295D16E6006512E8 /* Area.swift */; };
+		EFC7F4BF2968D0F100612E43 /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F4BE2968D0F100612E43 /* User.png */; };
+		EFC7F4C32968EDF500612E43 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4C22968EDF500612E43 /* Usuario.swift */; };
 		EFD862152964AD15006F7DCA /* User.webp in Resources */ = {isa = PBXBuildFile; fileRef = EFD862142964AD15006F7DCA /* User.webp */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		EF7D60C4295D1687006512E8 /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
 		EF7D60C6295D16D0006512E8 /* Departamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departamento.swift; sourceTree = "<group>"; };
 		EF7D60C8295D16E6006512E8 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		EFC7F4BE2968D0F100612E43 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
+		EFC7F4C22968EDF500612E43 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		EFD862142964AD15006F7DCA /* User.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = User.webp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +118,7 @@
 				EF7D60A1295CAAA8006512E8 /* SceneDelegate.swift */,
 				EF7D60A3295CAAA8006512E8 /* ViewController.swift */,
 				EF7D60AB295CAAAC006512E8 /* Assets.xcassets */,
+				EFC7F4BE2968D0F100612E43 /* User.png */,
 				EF7D60B0295CAAAC006512E8 /* Info.plist */,
 				EF7D60A8295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld */,
 			);
@@ -123,11 +128,9 @@
 		EF7D60B6295CAADB006512E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFC7F4C12968EDCE00612E43 /* Usuario */,
+				EFC7F4C02968EDAD00612E43 /* Producto */,
 				EF7D60BC295CF45B006512E8 /* Result.swift */,
-				EF7D60BE295CF4A2006512E8 /* Producto.swift */,
-				EF7D60C4295D1687006512E8 /* Proveedor.swift */,
-				EF7D60C6295D16D0006512E8 /* Departamento.swift */,
-				EF7D60C8295D16E6006512E8 /* Area.swift */,
 			);
 			name = Model;
 			path = OdiazEcommerce/Model;
@@ -164,6 +167,25 @@
 			);
 			name = Controller;
 			path = OdiazEcommerce/Controller;
+			sourceTree = "<group>";
+		};
+		EFC7F4C02968EDAD00612E43 /* Producto */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D60C8295D16E6006512E8 /* Area.swift */,
+				EF7D60C6295D16D0006512E8 /* Departamento.swift */,
+				EF7D60C4295D1687006512E8 /* Proveedor.swift */,
+				EF7D60BE295CF4A2006512E8 /* Producto.swift */,
+			);
+			path = Producto;
+			sourceTree = "<group>";
+		};
+		EFC7F4C12968EDCE00612E43 /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				EFC7F4C22968EDF500612E43 /* Usuario.swift */,
+			);
+			path = Usuario;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC7F4BF2968D0F100612E43 /* User.png in Resources */,
 				EF7D60AF295CAAAC006512E8 /* LaunchScreen.storyboard in Resources */,
 				EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */,
 				EF7D60AC295CAAAC006512E8 /* Assets.xcassets in Resources */,
@@ -291,6 +314,7 @@
 				EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */,
 				EF7D60A0295CAAA8006512E8 /* AppDelegate.swift in Sources */,
 				EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */,
+				EFC7F4C32968EDF500612E43 /* Usuario.swift in Sources */,
 				EF7D60AA295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld in Sources */,
 				EF7D60BB295CAB59006512E8 /* DB.swift in Sources */,
 				EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */,
