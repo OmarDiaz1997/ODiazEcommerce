@@ -10,19 +10,19 @@ struct Departamento {
     var IdDepartamento : Int
     var Nombre : String
     //Propiedades de navegación
-    var area : Area?
+    var Area : Area?
     
     
-    init(IdDepartamento: Int, Nombre: String) {
+    init(IdDepartamento: Int, Nombre: String, Area: Area) {
         self.IdDepartamento = IdDepartamento
         self.Nombre = Nombre
-        //self.area = area
+        self.Area = Area
     }
     
     
     init() {
         self.IdDepartamento = 0
         self.Nombre = ""
-        self.area = nil
+        self.Area = nil
     }
 }

@@ -26,6 +26,11 @@
 		EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C4295D1687006512E8 /* Proveedor.swift */; };
 		EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C6295D16D0006512E8 /* Departamento.swift */; };
 		EF7D60C9295D16E6006512E8 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C8295D16E6006512E8 /* Area.swift */; };
+		EF8BCFA4296BA5CF0085E955 /* DepartamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA3296BA5CF0085E955 /* DepartamentoViewController.swift */; };
+		EF8BCFA6296BA6770085E955 /* GetAllDepartamentoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */; };
+		EF8BCFAA296BABCB0085E955 /* DepartamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */; };
+		EF8BCFB4296BCF630085E955 /* DepartamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */; };
+		EF8BCFB5296BCF630085E955 /* DepartamentoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF8BCFB3296BCF630085E955 /* DepartamentoTableViewCell.xib */; };
 		EFC7F4BF2968D0F100612E43 /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F4BE2968D0F100612E43 /* User.png */; };
 		EFC7F4C32968EDF500612E43 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4C22968EDF500612E43 /* Usuario.swift */; };
 		EFD862152964AD15006F7DCA /* User.webp in Resources */ = {isa = PBXBuildFile; fileRef = EFD862142964AD15006F7DCA /* User.webp */; };
@@ -55,6 +60,11 @@
 		EF7D60C4295D1687006512E8 /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
 		EF7D60C6295D16D0006512E8 /* Departamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departamento.swift; sourceTree = "<group>"; };
 		EF7D60C8295D16E6006512E8 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		EF8BCFA3296BA5CF0085E955 /* DepartamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoViewController.swift; sourceTree = "<group>"; };
+		EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllDepartamentoTableViewController.swift; sourceTree = "<group>"; };
+		EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoViewModel.swift; sourceTree = "<group>"; };
+		EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoTableViewCell.swift; sourceTree = "<group>"; };
+		EF8BCFB3296BCF630085E955 /* DepartamentoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartamentoTableViewCell.xib; sourceTree = "<group>"; };
 		EFC7F4BE2968D0F100612E43 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
 		EFC7F4C22968EDF500612E43 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		EFD862142964AD15006F7DCA /* User.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = User.webp; sourceTree = "<group>"; };
@@ -139,8 +149,9 @@
 		EF7D60B7295CAAEB006512E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF8BCFA8296BAB7E0085E955 /* Departamento */,
+				EF8BCFA7296BAB600085E955 /* Producto */,
 				EF7D60BA295CAB59006512E8 /* DB.swift */,
-				EF7D60C2295CF5EB006512E8 /* ProductoViewModel.swift */,
 			);
 			name = ViewModel;
 			path = OdiazEcommerce/ViewModel;
@@ -149,7 +160,8 @@
 		EF7D60B8295CAB0F006512E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */,
+				EF8BCFAD296BCDB10085E955 /* Departamento */,
+				EF8BCFAC296BCD9C0085E955 /* Producto */,
 				EFD862142964AD15006F7DCA /* User.webp */,
 				EF7D60AD295CAAAC006512E8 /* LaunchScreen.storyboard */,
 				EF7D60A5295CAAA8006512E8 /* Main.storyboard */,
@@ -161,12 +173,63 @@
 		EF7D60B9295CAB22006512E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */,
-				EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */,
-				EF7D60C0295CF53E006512E8 /* ProductoForm.swift */,
+				EF8BCFA2296BA4DA0085E955 /* Departamento */,
+				EF8BCFA1296BA4BC0085E955 /* Producto */,
 			);
 			name = Controller;
 			path = OdiazEcommerce/Controller;
+			sourceTree = "<group>";
+		};
+		EF8BCFA1296BA4BC0085E955 /* Producto */ = {
+			isa = PBXGroup;
+			children = (
+				EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */,
+				EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */,
+				EF7D60C0295CF53E006512E8 /* ProductoForm.swift */,
+			);
+			path = Producto;
+			sourceTree = "<group>";
+		};
+		EF8BCFA2296BA4DA0085E955 /* Departamento */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */,
+				EF8BCFA3296BA5CF0085E955 /* DepartamentoViewController.swift */,
+				EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */,
+			);
+			path = Departamento;
+			sourceTree = "<group>";
+		};
+		EF8BCFA7296BAB600085E955 /* Producto */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D60C2295CF5EB006512E8 /* ProductoViewModel.swift */,
+			);
+			path = Producto;
+			sourceTree = "<group>";
+		};
+		EF8BCFA8296BAB7E0085E955 /* Departamento */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */,
+			);
+			path = Departamento;
+			sourceTree = "<group>";
+		};
+		EF8BCFAC296BCD9C0085E955 /* Producto */ = {
+			isa = PBXGroup;
+			children = (
+				EF8BCFB3296BCF630085E955 /* DepartamentoTableViewCell.xib */,
+				EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */,
+			);
+			path = Producto;
+			sourceTree = "<group>";
+		};
+		EF8BCFAD296BCDB10085E955 /* Departamento */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Departamento;
 			sourceTree = "<group>";
 		};
 		EFC7F4C02968EDAD00612E43 /* Producto */ = {
@@ -253,6 +316,7 @@
 				EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */,
 				EF7D60AC295CAAAC006512E8 /* Assets.xcassets in Resources */,
 				EFD862152964AD15006F7DCA /* User.webp in Resources */,
+				EF8BCFB5296BCF630085E955 /* DepartamentoTableViewCell.xib in Resources */,
 				EF7D60A7295CAAA8006512E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,11 +377,15 @@
 				EF7D60BF295CF4A2006512E8 /* Producto.swift in Sources */,
 				EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */,
 				EF7D60A0295CAAA8006512E8 /* AppDelegate.swift in Sources */,
+				EF8BCFB4296BCF630085E955 /* DepartamentoTableViewCell.swift in Sources */,
+				EF8BCFA6296BA6770085E955 /* GetAllDepartamentoTableViewController.swift in Sources */,
+				EF8BCFAA296BABCB0085E955 /* DepartamentoViewModel.swift in Sources */,
 				EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */,
 				EFC7F4C32968EDF500612E43 /* Usuario.swift in Sources */,
 				EF7D60AA295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld in Sources */,
 				EF7D60BB295CAB59006512E8 /* DB.swift in Sources */,
 				EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */,
+				EF8BCFA4296BA5CF0085E955 /* DepartamentoViewController.swift in Sources */,
 				EF7D60C3295CF5EB006512E8 /* ProductoViewModel.swift in Sources */,
 				EF7D60C9295D16E6006512E8 /* Area.swift in Sources */,
 				EF7D60A2295CAAA8006512E8 /* SceneDelegate.swift in Sources */,
