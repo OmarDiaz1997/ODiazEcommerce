@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C89F6682421CCD19445730F7 /* Pods_OdiazEcommerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BEE3CDBC7F24AFCFC7FE2C /* Pods_OdiazEcommerce.framework */; };
+		EF3F4781296CE67C00681A07 /* UsuarioFromController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F4780296CE67C00681A07 /* UsuarioFromController.swift */; };
+		EF3F4784296CE7E600681A07 /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F4783296CE7E600681A07 /* UsuarioViewModel.swift */; };
 		EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */; };
 		EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */; };
 		EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */; };
@@ -40,6 +42,8 @@
 		8E1F956B53AFFECC12D06385 /* Pods-OdiazEcommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OdiazEcommerce.debug.xcconfig"; path = "Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce.debug.xcconfig"; sourceTree = "<group>"; };
 		931EED727AB836862B586E2C /* Pods-OdiazEcommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OdiazEcommerce.release.xcconfig"; path = "Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce.release.xcconfig"; sourceTree = "<group>"; };
 		C5BEE3CDBC7F24AFCFC7FE2C /* Pods_OdiazEcommerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OdiazEcommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3F4780296CE67C00681A07 /* UsuarioFromController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioFromController.swift; sourceTree = "<group>"; };
+		EF3F4783296CE7E600681A07 /* UsuarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewModel.swift; sourceTree = "<group>"; };
 		EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
 		EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoTableViewCell.swift; sourceTree = "<group>"; };
 		EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoTableViewCell.xib; sourceTree = "<group>"; };
@@ -99,6 +103,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EF3F477F296CE5FB00681A07 /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				EF3F4780296CE67C00681A07 /* UsuarioFromController.swift */,
+			);
+			path = Usuario;
+			sourceTree = "<group>";
+		};
+		EF3F4782296CE7A300681A07 /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				EF3F4783296CE7E600681A07 /* UsuarioViewModel.swift */,
+			);
+			path = Usuario;
+			sourceTree = "<group>";
+		};
 		EF7D6093295CAAA8006512E8 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +169,7 @@
 		EF7D60B7295CAAEB006512E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF3F4782296CE7A300681A07 /* Usuario */,
 				EF8BCFA8296BAB7E0085E955 /* Departamento */,
 				EF8BCFA7296BAB600085E955 /* Producto */,
 				EF7D60BA295CAB59006512E8 /* DB.swift */,
@@ -173,6 +194,7 @@
 		EF7D60B9295CAB22006512E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF3F477F296CE5FB00681A07 /* Usuario */,
 				EF8BCFA2296BA4DA0085E955 /* Departamento */,
 				EF8BCFA1296BA4BC0085E955 /* Producto */,
 			);
@@ -219,7 +241,6 @@
 		EF8BCFAC296BCD9C0085E955 /* Producto */ = {
 			isa = PBXGroup;
 			children = (
-				EF8BCFB3296BCF630085E955 /* DepartamentoTableViewCell.xib */,
 				EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */,
 			);
 			path = Producto;
@@ -228,6 +249,7 @@
 		EF8BCFAD296BCDB10085E955 /* Departamento */ = {
 			isa = PBXGroup;
 			children = (
+				EF8BCFB3296BCF630085E955 /* DepartamentoTableViewCell.xib */,
 			);
 			path = Departamento;
 			sourceTree = "<group>";
@@ -370,8 +392,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3F4784296CE7E600681A07 /* UsuarioViewModel.swift in Sources */,
 				EF7D60BD295CF45B006512E8 /* Result.swift in Sources */,
 				EF7D60C1295CF53E006512E8 /* ProductoForm.swift in Sources */,
+				EF3F4781296CE67C00681A07 /* UsuarioFromController.swift in Sources */,
 				EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */,
 				EF7D60A4295CAAA8006512E8 /* ViewController.swift in Sources */,
 				EF7D60BF295CF4A2006512E8 /* Producto.swift in Sources */,

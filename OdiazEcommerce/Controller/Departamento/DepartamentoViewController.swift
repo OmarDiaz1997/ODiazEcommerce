@@ -25,15 +25,18 @@ class DepartamentoViewController: UIViewController,UIImagePickerControllerDelega
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    
     func Validar(){
         if self.idDepartamento == nil {
-            ActionButton.setTitle("INSERT", for: .normal)
+            ActionButton.setTitle("Agregar", for: .normal)
         }else{
-            ActionButton.setTitle("UPDATE", for: .normal)
+            ActionButton.setTitle("Actualizar", for: .normal)
             
             let result : Result = departamentoViewModel.GetById(IdDepartamento: idDepartamento!)
             if result.Correct{
-                let departamento = result.Object as! Departamento
+                let departamento = result.Object! as! Departamento
                 
                 NombreTextField.text = departamento.Nombre
                 AreaTextField.text = String(departamento.Area!.IdArea)
@@ -56,7 +59,7 @@ class DepartamentoViewController: UIViewController,UIImagePickerControllerDelega
         
         departamentoModel = Departamento(IdDepartamento: 0, Nombre: Nombre, Area: Area(IdArea: Int(IdArea)!, Nombre: ""))
         
-        if(sender as AnyObject).currentTitle == "INSERT"{
+        if(sender as AnyObject).currentTitle == "Agregar"{
             let result = departamentoViewModel.Add(departamento: departamentoModel!)
             
             if result.Correct{
@@ -84,21 +87,23 @@ class DepartamentoViewController: UIViewController,UIImagePickerControllerDelega
                 alert.addAction(Aceptar)
                 self.present(alert,animated: false)
             }
-        }else if (sender as AnyObject).currentTitle == "UPDATE"{
+            
+            
+            /* UPDATE  */
+        }else if (sender as AnyObject).currentTitle == "Actualizar"{
             departamentoModel = Departamento(IdDepartamento: self.idDepartamento!, Nombre: Nombre, Area: Area(IdArea: Int(IdArea)!, Nombre: ""))
             
             let result = departamentoViewModel.Update(departamento: departamentoModel!)
             
             if result.Correct{
                 let alert = UIAlertController(title: "Confirmación", message: "Departamento actualizado correctamente"+result.ErrorMessage, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "Cerrar", style: .default)
+                //let ok = UIAlertAction(title: "Cerrar", style: .default)
                 
                 let Aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: { action in
-                    //self.NombreField.text = ""
-                    //self.AreaTextField.text = ""
+                    self.dismiss(animated: true)
                   })
                 
-                alert.addAction(ok)
+                //alert.addAction(ok)
                 alert.addAction(Aceptar)
                 self.present(alert,animated: false)
             }

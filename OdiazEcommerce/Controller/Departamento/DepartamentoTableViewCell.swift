@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class DepartamentoTableViewCell: UITableViewCell {
-
+class DepartamentoTableViewCell: SwipeTableViewCell {
+    
+    @IBOutlet weak var IdDepartamentoCell: UILabel!
+    @IBOutlet weak var NombreCell: UILabel!
+    @IBOutlet weak var AreaCell: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

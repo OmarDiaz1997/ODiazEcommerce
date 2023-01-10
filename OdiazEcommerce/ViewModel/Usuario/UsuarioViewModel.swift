@@ -1,16 +1,16 @@
 //
-//  DepartamentoViewModel.swift
+//  UsuarioViewModel.swift
 //  OdiazEcommerce
 //
-//  Created by Omar Diaz on 08/01/23.
+//  Created by MacbookMBA8 on 09/01/23.
 //
 
 import Foundation
 import SQLite3
 
-class DepartamentoViewModel {
+class UsuarioViewModel {
     
-    let DepartamentoModel : Departamento? = nil
+    let UsuarioModel : Usuario? = nil
     
     /*---------  ADD   --------*/
     func Add(departamento : Departamento) -> Result{

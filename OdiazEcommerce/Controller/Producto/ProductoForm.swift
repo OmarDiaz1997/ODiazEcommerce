@@ -98,8 +98,8 @@ class ProductoForm: UIViewController, UIImagePickerControllerDelegate, UINavigat
                 }
         
         
-        productoModel = Producto(IdProducto: 0, Nombre: Nombre, PrecioUnitario: Double(PrecioUnitario)!, Stock: Int(Stock)!, Descripcion: Descripcion, Imagen: imageString,
-                                 Proveedor: Proveedor(IdProveedor: Int(IdProveedor)!, Nombre: "", Telefono: ""), Departamento: Departamento(IdDepartamento: Int(IdDepartamento)!, Nombre: ""))
+        //productoModel = Producto(IdProducto: 0, Nombre: Nombre, PrecioUnitario: Double(PrecioUnitario)!, Stock: Int(Stock)!, Descripcion: Descripcion, Imagen: imageString,
+                                 //Proveedor: Proveedor(IdProveedor: Int(IdProveedor)!, Nombre: "", Telefono: ""), Departamento: Departamento(IdDepartamento: Int(IdDepartamento)!, Nombre: ""))
         
         if sender.currentTitle == "INSERT"{
             let result = productoViewModel.Add(producto: productoModel!)
@@ -136,8 +136,8 @@ class ProductoForm: UIViewController, UIImagePickerControllerDelegate, UINavigat
                     }
         }
         else if sender.currentTitle == "UPDATE" {
-            productoModel = Producto(IdProducto: IdProducto!, Nombre: Nombre, PrecioUnitario: Double(PrecioUnitario)!, Stock: Int(Stock)!, Descripcion: Descripcion, Imagen: imageString,
-                                     Proveedor: Proveedor(IdProveedor: Int(IdProveedor)!, Nombre: "", Telefono: ""), Departamento: Departamento(IdDepartamento: Int(IdDepartamento)!, Nombre: ""))
+            //productoModel = Producto(IdProducto: IdProducto!, Nombre: Nombre, PrecioUnitario: Double(PrecioUnitario)!, Stock: Int(Stock)!, Descripcion: Descripcion, Imagen: imageString,
+              //                       Proveedor: Proveedor(IdProveedor: Int(IdProveedor)!, Nombre: "", Telefono: ""), Departamento: Departamento(IdDepartamento: Int(IdDepartamento)!, Nombre: ""))
             
             let result = productoViewModel.Update(producto: productoModel!)
             
