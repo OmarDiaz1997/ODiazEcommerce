@@ -7,6 +7,7 @@
 
 import Foundation
 struct Usuario {
+    var IdUsuario : Int
     var UserName :String
     var Nombre : String
     var ApellidoPaterno : String
@@ -20,7 +21,8 @@ struct Usuario {
     var CURP : String
     var Imagen : String
     
-    init(UserName: String, Nombre: String, ApellidoPaterno: String, ApellidoMaterno: String, Email: String, Password: String, FechaNacimiento: Date, Sexo: String, Telefono: String, Celular: String, CURP: String, Imagen: String) {
+    init(IdUsuario : Int, UserName: String, Nombre: String, ApellidoPaterno: String, ApellidoMaterno: String, Email: String, Password: String, FechaNacimiento: Date, Sexo: String, Telefono: String, Celular: String, CURP: String, Imagen: String) {
+        self.IdUsuario = IdUsuario
         self.UserName = UserName
         self.Nombre = Nombre
         self.ApellidoPaterno = ApellidoPaterno
@@ -36,6 +38,7 @@ struct Usuario {
     }
     
     init() {
+        self.IdUsuario = 0
         self.UserName = ""
         self.Nombre = ""
         self.ApellidoPaterno = ""

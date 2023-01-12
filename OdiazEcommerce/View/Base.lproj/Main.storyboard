@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xct-lW-feo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A96-24-l1l">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="BND-FG-SMH" kind="relationship" relationship="rootViewController" id="epn-uP-fu7"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBF-B5-eko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,20 +40,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w2g-rA-fn8" id="57W-cY-vta">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqa-db-GMS">
-                                            <rect key="frame" x="299" y="4" width="73" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" title="Nuevo">
-                                                <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
-                                            </buttonConfiguration>
-                                            <connections>
-                                                <action selector="AddButton:" destination="BND-FG-SMH" eventType="touchUpInside" id="dbW-1u-eU3"/>
-                                                <segue destination="aZl-PC-ryp" kind="show" identifier="SegueAdd" id="cxQ-He-O5M"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -59,7 +48,22 @@
                             <outlet property="delegate" destination="BND-FG-SMH" id="uXU-CR-NCE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="lcZ-5q-X8Z"/>
+                    <navigationItem key="navigationItem" id="lcZ-5q-X8Z">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="6vd-pR-WWe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zqa-db-GMS">
+                                <rect key="frame" x="304" y="4.6666666666666679" width="73" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Nuevo">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="AddButton:" destination="BND-FG-SMH" eventType="touchUpInside" id="dbW-1u-eU3"/>
+                                    <segue destination="aZl-PC-ryp" kind="show" identifier="SegueAdd" id="cxQ-He-O5M"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="aZl-PC-ryp" kind="show" identifier="SegueUpdate" id="c7J-xe-A5C"/>
                     </connections>
@@ -73,7 +77,7 @@
             <objects>
                 <viewController id="aZl-PC-ryp" customClass="DepartamentoViewController" customModule="OdiazEcommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U3g-BM-2QV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Departamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddT-MP-TR5">
@@ -138,7 +142,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ProductoForm" customModule="OdiazEcommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7k-gj-oyP" userLabel="Nombre Text Field">
@@ -173,12 +177,6 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zgv-Dw-bgO" userLabel="Descripcion Text Field">
                                 <rect key="frame" x="16" y="559" width="361" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8N0-wd-iio" userLabel="IdProducto Text Field">
-                                <rect key="frame" x="16" y="630" width="361" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -235,22 +233,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IdProducto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-WQ-frg">
-                                <rect key="frame" x="16" y="601" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-cn-gpT">
-                                <rect key="frame" x="145" y="711" width="102" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Acptar"/>
-                                <connections>
-                                    <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xf9-Qx-Ou7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-Nc-5QL" userLabel="camera">
                                 <rect key="frame" x="255" y="203" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -264,14 +246,23 @@
                                     <action selector="CameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X4I-dx-qfo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-cn-gpT">
+                                <rect key="frame" x="145" y="644" width="102" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Aceptar"/>
+                                <connections>
+                                    <action selector="ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xf9-Qx-Ou7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RoU-au-4Ff"/>
                     <connections>
                         <outlet property="DepartamentoField" destination="BXP-qi-OLK" id="f0S-4Y-nCi"/>
                         <outlet property="DescripcionField" destination="zgv-Dw-bgO" id="Wy5-yr-aqU"/>
-                        <outlet property="IdProductoField" destination="8N0-wd-iio" id="ORx-Vg-F3u"/>
                         <outlet property="NombreField" destination="A7k-gj-oyP" id="rBj-Fk-LKe"/>
                         <outlet property="PrecioUnitarioField" destination="zmU-Wz-mOA" id="LKB-Xe-p8K"/>
                         <outlet property="ProveedorField" destination="i8x-ee-ygM" id="aDt-b6-mb2"/>
@@ -283,10 +274,73 @@
             </objects>
             <point key="canvasLocation" x="2706" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="bYB-6o-dAy">
+            <objects>
+                <navigationController id="A96-24-l1l" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kg0-CJ-afb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ulS-Nr-l2S" kind="relationship" relationship="rootViewController" id="mz2-ik-dDs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PT8-JD-Q9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="835"/>
+        </scene>
+        <!--Get All Usuario Table View Controller-->
+        <scene sceneID="bX2-TL-zOO">
+            <objects>
+                <tableViewController id="ulS-Nr-l2S" customClass="GetAllUsuarioTableViewController" customModule="OdiazEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="u8v-2i-1y4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XyB-nD-ocM">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XyB-nD-ocM" id="J8K-F8-ZWO">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ulS-Nr-l2S" id="ssv-PD-89N"/>
+                            <outlet property="delegate" destination="ulS-Nr-l2S" id="rao-xk-T4P"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="nBh-Bl-G8R">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="r9I-ZW-tG5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="C4N-wy-pWY">
+                                <rect key="frame" x="304" y="4.6666666666666679" width="73" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Nuevo">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <connections>
+                                <action selector="Add:" destination="ulS-Nr-l2S" id="vp3-2a-JBd"/>
+                                <segue destination="xct-lW-feo" kind="show" id="Bxs-4R-0Ym"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="xct-lW-feo" kind="show" identifier="SegueUpdate" id="sHg-HN-0Gt"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqh-ut-sxu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="835"/>
+        </scene>
+        <!--Usuario From Controller-->
         <scene sceneID="lBU-xL-hlh">
             <objects>
-                <viewController id="xct-lW-feo" sceneMemberID="viewController">
+                <viewController id="xct-lW-feo" customClass="UsuarioFromController" customModule="OdiazEcommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RPe-6H-B6M">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -423,6 +477,9 @@
                                         <rect key="frame" x="143" y="981" width="106" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Aceptar"/>
+                                        <connections>
+                                            <action selector="ActionButton:" destination="xct-lW-feo" eventType="touchUpInside" id="J4w-d4-paC"/>
+                                        </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="8mh-EV-VXi">
                                         <rect key="frame" x="127" y="633" width="139" height="40"/>
@@ -431,6 +488,15 @@
                                         </date>
                                         <locale key="locale" localeIdentifier="es_MX"/>
                                     </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbH-MM-Poo">
+                                        <rect key="frame" x="262" y="135" width="37" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="camera.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="ImageCamera:" destination="xct-lW-feo" eventType="touchUpInside" id="ae6-sj-AVj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="TC0-Gc-sVi" firstAttribute="leading" secondItem="8ZG-gZ-daL" secondAttribute="leading" constant="37" id="0Ev-Ed-oCi"/>
@@ -510,7 +576,23 @@
                             <constraint firstItem="zxc-TK-hqi" firstAttribute="bottom" secondItem="8ZG-gZ-daL" secondAttribute="bottom" id="ulc-dq-jEF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iUq-9b-IQU"/>
                     <size key="freeformSize" width="393" height="1100"/>
+                    <connections>
+                        <outlet property="ActionButton" destination="7v2-3k-UFj" id="4D5-Kv-85o"/>
+                        <outlet property="ApellidoMaternoTextField" destination="6aM-qj-rSo" id="hIF-kK-APH"/>
+                        <outlet property="ApellidoPaternoTextField" destination="Wr2-C3-5tu" id="nHx-ZD-WlZ"/>
+                        <outlet property="CURPTextField" destination="CDT-e5-fhD" id="E8N-ki-pj8"/>
+                        <outlet property="CelularTextField" destination="Gpg-eZ-J8X" id="Ln1-FC-1Sm"/>
+                        <outlet property="EmailTextField" destination="ylw-ID-bmR" id="seb-Rb-J18"/>
+                        <outlet property="FechaNacimientoPicker" destination="8mh-EV-VXi" id="Uwc-7d-300"/>
+                        <outlet property="NombreTextField" destination="VyZ-ZM-1sg" id="d4g-2x-rhX"/>
+                        <outlet property="PasswordTextField" destination="bD6-rk-3CZ" id="LNI-q4-4M3"/>
+                        <outlet property="SexoTextField" destination="kgE-Z1-2sf" id="cif-oC-Z8T"/>
+                        <outlet property="TeleFonoTextField" destination="SWi-GJ-Gcr" id="XpB-NM-Aqh"/>
+                        <outlet property="UserTextField" destination="jIh-o1-OeW" id="TjU-WU-k06"/>
+                        <outlet property="imageView" destination="nRd-hZ-rWs" id="8Jv-T8-fo0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ff-eI-kYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -539,6 +621,9 @@
                                             <buttonConfiguration key="configuration" style="filled" title="Nuevo">
                                                 <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddSegue" id="23k-WS-hxf"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -550,6 +635,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="7lQ-Uk-T5v"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="UpdateSegue" id="xSB-1H-zHy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5a-oO-WOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -573,7 +661,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c7J-xe-A5C"/>
+        <segue reference="Bxs-4R-0Ym"/>
+        <segue reference="23k-WS-hxf"/>
+        <segue reference="cxQ-He-O5M"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.circle.fill" catalog="system" width="128" height="123"/>

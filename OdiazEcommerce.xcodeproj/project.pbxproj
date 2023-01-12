@@ -13,6 +13,10 @@
 		EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */; };
 		EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */; };
 		EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */; };
+		EF6EB4F0296DD70B000CBBF2 /* DepartamentoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6EB4EF296DD70B000CBBF2 /* DepartamentoTableViewCell.xib */; };
+		EF6EB4F5296DE0AC000CBBF2 /* UsuarioTableViewCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EB4F3296DE0AC000CBBF2 /* UsuarioTableViewCelda.swift */; };
+		EF6EB4F6296DE0AC000CBBF2 /* UsuarioTableViewCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6EB4F4296DE0AC000CBBF2 /* UsuarioTableViewCelda.xib */; };
+		EF6EB4FA296DF147000CBBF2 /* GetAllUsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6EB4F9296DF147000CBBF2 /* GetAllUsuarioTableViewController.swift */; };
 		EF7D60A0295CAAA8006512E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D609F295CAAA8006512E8 /* AppDelegate.swift */; };
 		EF7D60A2295CAAA8006512E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60A1295CAAA8006512E8 /* SceneDelegate.swift */; };
 		EF7D60A4295CAAA8006512E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60A3295CAAA8006512E8 /* ViewController.swift */; };
@@ -32,7 +36,6 @@
 		EF8BCFA6296BA6770085E955 /* GetAllDepartamentoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */; };
 		EF8BCFAA296BABCB0085E955 /* DepartamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */; };
 		EF8BCFB4296BCF630085E955 /* DepartamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */; };
-		EF8BCFB5296BCF630085E955 /* DepartamentoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF8BCFB3296BCF630085E955 /* DepartamentoTableViewCell.xib */; };
 		EFC7F4BF2968D0F100612E43 /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F4BE2968D0F100612E43 /* User.png */; };
 		EFC7F4C32968EDF500612E43 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4C22968EDF500612E43 /* Usuario.swift */; };
 		EFD862152964AD15006F7DCA /* User.webp in Resources */ = {isa = PBXBuildFile; fileRef = EFD862142964AD15006F7DCA /* User.webp */; };
@@ -47,6 +50,10 @@
 		EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
 		EF59A0D4295F773A00EDB7C6 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoTableViewCell.swift; sourceTree = "<group>"; };
 		EF59A0D5295F773A00EDB7C6 /* ProductoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoTableViewCell.xib; sourceTree = "<group>"; };
+		EF6EB4EF296DD70B000CBBF2 /* DepartamentoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DepartamentoTableViewCell.xib; sourceTree = "<group>"; };
+		EF6EB4F3296DE0AC000CBBF2 /* UsuarioTableViewCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewCelda.swift; sourceTree = "<group>"; };
+		EF6EB4F4296DE0AC000CBBF2 /* UsuarioTableViewCelda.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsuarioTableViewCelda.xib; sourceTree = "<group>"; };
+		EF6EB4F9296DF147000CBBF2 /* GetAllUsuarioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllUsuarioTableViewController.swift; sourceTree = "<group>"; };
 		EF7D609C295CAAA8006512E8 /* OdiazEcommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OdiazEcommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7D609F295CAAA8006512E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF7D60A1295CAAA8006512E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +75,6 @@
 		EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllDepartamentoTableViewController.swift; sourceTree = "<group>"; };
 		EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoViewModel.swift; sourceTree = "<group>"; };
 		EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoTableViewCell.swift; sourceTree = "<group>"; };
-		EF8BCFB3296BCF630085E955 /* DepartamentoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartamentoTableViewCell.xib; sourceTree = "<group>"; };
 		EFC7F4BE2968D0F100612E43 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
 		EFC7F4C22968EDF500612E43 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		EFD862142964AD15006F7DCA /* User.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = User.webp; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				EF3F4780296CE67C00681A07 /* UsuarioFromController.swift */,
+				EF6EB4F3296DE0AC000CBBF2 /* UsuarioTableViewCelda.swift */,
+				EF6EB4F9296DF147000CBBF2 /* GetAllUsuarioTableViewController.swift */,
 			);
 			path = Usuario;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 		EF7D60B8295CAB0F006512E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF9B961E296DD44C00264D49 /* Usuario */,
 				EF8BCFAD296BCDB10085E955 /* Departamento */,
 				EF8BCFAC296BCD9C0085E955 /* Producto */,
 				EFD862142964AD15006F7DCA /* User.webp */,
@@ -249,9 +258,17 @@
 		EF8BCFAD296BCDB10085E955 /* Departamento */ = {
 			isa = PBXGroup;
 			children = (
-				EF8BCFB3296BCF630085E955 /* DepartamentoTableViewCell.xib */,
+				EF6EB4EF296DD70B000CBBF2 /* DepartamentoTableViewCell.xib */,
 			);
 			path = Departamento;
+			sourceTree = "<group>";
+		};
+		EF9B961E296DD44C00264D49 /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				EF6EB4F4296DE0AC000CBBF2 /* UsuarioTableViewCelda.xib */,
+			);
+			path = Usuario;
 			sourceTree = "<group>";
 		};
 		EFC7F4C02968EDAD00612E43 /* Producto */ = {
@@ -334,11 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC7F4BF2968D0F100612E43 /* User.png in Resources */,
+				EF6EB4F6296DE0AC000CBBF2 /* UsuarioTableViewCelda.xib in Resources */,
 				EF7D60AF295CAAAC006512E8 /* LaunchScreen.storyboard in Resources */,
 				EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */,
 				EF7D60AC295CAAAC006512E8 /* Assets.xcassets in Resources */,
 				EFD862152964AD15006F7DCA /* User.webp in Resources */,
-				EF8BCFB5296BCF630085E955 /* DepartamentoTableViewCell.xib in Resources */,
+				EF6EB4F0296DD70B000CBBF2 /* DepartamentoTableViewCell.xib in Resources */,
 				EF7D60A7295CAAA8006512E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,8 +410,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6EB4F5296DE0AC000CBBF2 /* UsuarioTableViewCelda.swift in Sources */,
 				EF3F4784296CE7E600681A07 /* UsuarioViewModel.swift in Sources */,
 				EF7D60BD295CF45B006512E8 /* Result.swift in Sources */,
+				EF6EB4FA296DF147000CBBF2 /* GetAllUsuarioTableViewController.swift in Sources */,
 				EF7D60C1295CF53E006512E8 /* ProductoForm.swift in Sources */,
 				EF3F4781296CE67C00681A07 /* UsuarioFromController.swift in Sources */,
 				EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */,

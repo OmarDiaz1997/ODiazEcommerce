@@ -20,7 +20,7 @@ class DepartamentoViewController: UIViewController,UIImagePickerControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Validar()
+        //Validar()
 
         // Do any additional setup after loading the view.
     }
@@ -45,6 +45,7 @@ class DepartamentoViewController: UIViewController,UIImagePickerControllerDelega
             }
         }
     }
+    
     
     @IBAction func ActionButton(_ sender: UIButton) {
         guard let Nombre = NombreTextField.text, Nombre != "" else{

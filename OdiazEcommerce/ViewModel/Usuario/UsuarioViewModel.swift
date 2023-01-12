@@ -5,31 +5,73 @@
 //  Created by MacbookMBA8 on 09/01/23.
 //
 
-import Foundation
-import SQLite3
+import CoreData
+import UIKit
 
-class UsuarioViewModel {
+class UsuarioViewModel{
     
-    let UsuarioModel : Usuario? = nil
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    /*---------  ADD   --------*/
-    func Add(departamento : Departamento) -> Result{
-                
+    
+    func Add(usuario : Usuario) -> Result{
+        
         var result = Result()
-        let context = DB.init()
-        let query = "INSERT INTO Departamento(Nombre, IdArea) VALUES(?, ?)"
-        var statement : OpaquePointer? = nil
         do{
-            if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK{
-                sqlite3_bind_text(statement, 1, (departamento.Nombre as NSString).utf8String, -1, nil)
-                
-                if sqlite3_step(statement) == SQLITE_DONE{
-                    result.Correct = true
-                }else{
-                    result.Correct = false
-                }
-            }
+            let context = appDelegate.persistentContainer.viewContext
+            let entidad = NSEntityDescription.entity(forEntityName: "Usuario", in: context)
+            let usuarioCoreData = NSManagedObject(entity: entidad!, insertInto: context)
+            
+            usuarioCoreData.setValue(usuario.UserName, forKey: "userName")
+            usuarioCoreData.setValue(usuario.Nombre, forKey: "nombre")
+            usuarioCoreData.setValue(usuario.ApellidoPaterno, forKey: "apellidoPaterno")
+            usuarioCoreData.setValue(usuario.ApellidoMaterno, forKey: "apellidoMaterno")
+            usuarioCoreData.setValue(usuario.Email, forKey: "email")
+            usuarioCoreData.setValue(usuario.Password, forKey: "password")
+            usuarioCoreData.setValue(usuario.FechaNacimiento, forKey: "fechaNacimiento")
+            usuarioCoreData.setValue(usuario.Sexo, forKey: "sexo")
+            usuarioCoreData.setValue(usuario.Telefono, forKey: "telefono")
+            usuarioCoreData.setValue(usuario.Celular, forKey: "celular")
+            usuarioCoreData.setValue(usuario.CURP, forKey: "curp")
+            usuarioCoreData.setValue(usuario.Imagen, forKey: "imagen")
+            
+            try! context.save()
+            result.Correct = true
+            
         }catch let error{
+            result.Correct = false
+            result.Ex = error
+            result.ErrorMessage = error.localizedDescription
+        }
+        return result
+    }
+    
+    func GetAll() -> Result {
+        var result = Result()
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Usuario")
+        do {
+            let usuarios = try context.fetch(request)
+            result.Objects = [Usuario]()
+            for objUsuario in usuarios as! [NSManagedObject] {
+                var usuario = Usuario()
+                //usuario.IdUsuario =  objUsuario.objectID.uriRepresentation().absoluteString
+                usuario.UserName = objUsuario.value(forKey: "userName") as! String
+                usuario.Nombre = objUsuario.value(forKey: "nombre") as! String
+                usuario.ApellidoPaterno = objUsuario.value(forKey: "apellidoPaterno") as! String
+                usuario.ApellidoMaterno = objUsuario.value(forKey: "apellidoMaterno") as! String
+                usuario.Email = objUsuario.value(forKey: "email") as! String
+                usuario.Password = objUsuario.value(forKey: "password") as! String
+                //usuario.FechaNacimiento = objUsuario.value(forKey: "fechaNacimiento") as! String
+                usuario.Sexo = objUsuario.value(forKey: "sexo") as! String
+                usuario.Telefono = objUsuario.value(forKey: "telefono") as! String
+                usuario.Celular = objUsuario.value(forKey: "celular") as! String
+                usuario.CURP = objUsuario.value(forKey: "curp") as! String
+                usuario.Imagen = objUsuario.value(forKey: "imagen") as! String
+                
+                result.Objects?.append(usuario)
+            }
+            result.Correct = true
+        } catch let error {
             result.Correct = false
             result.Ex = error
             result.ErrorMessage = error.localizedDescription
@@ -39,25 +81,22 @@ class UsuarioViewModel {
     
     
     
-    /*---------  UPDATE   --------*/
-    func Update(departamento : Departamento) -> Result {
+    func Delete(idUsuario : Int) -> Result{
+        //Para eliminar se necesita todo el modelo de usuario
+        
         var result = Result()
-        let context = DB.init()
-        let query = "UPDATE Departamento SET Nombre = ? , IdArea = ? WHERE IdDepartamento = ?"
-        var statement : OpaquePointer? = nil
         do{
-            if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK{
-                sqlite3_bind_text(statement, 1, (departamento.Nombre as NSString).utf8String, -1, nil)
-                sqlite3_bind_int(statement, 2, Int32(departamento.Area!.IdArea))
-                sqlite3_bind_int(statement, 3, Int32(departamento.IdDepartamento))
-                
-                
-                if sqlite3_step(statement) == SQLITE_DONE{
-                    result.Correct = true
-                }else{
-                    result.Correct = false
-                }
-            }
+            let context = appDelegate.persistentContainer.viewContext
+            let entidad = NSFetchRequest<NSFetchRequestResult>(entityName: "Usuario")
+            let usuarioCoreData = try context.fetch(entidad) as! [NSManagedObject]
+            
+         
+            //usuarioCoreData.setValue(usuario.UserName, forKey: "userName")
+            context.delete(usuarioCoreData[Int(usuarioCoreData[idUsuario].objectID.uriRepresentation().absoluteString.components(separatedBy: "/p")[1])!])
+            
+            try context.save()
+            result.Correct = true
+            
         }catch let error{
             result.Correct = false
             result.Ex = error
@@ -67,92 +106,106 @@ class UsuarioViewModel {
     }
     
     
-    /*---------  DELETE   --------*/
-    func Delete(IdDepartamento: Int32)-> Result{//
+    /*func Delete(IdUsuario: Int,Nombre: String,Apaterno: String, Email: String, Password: String) -> Result{
         var result = Result()
-        let context = DB.init()
-        let query = "DELETE FROM Departamento WHERE IdDepartamento = ?"
-        var statement : OpaquePointer? = nil
+        let usuarioform = Usuario()
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Usuario", in: context)
+        let request: NSFetchRequest<Usuario>=Usuario.fetchRequest()
+        request.entity = entity
+        
+        let predicate = NSPredicate(format: "Self = \(IdUsuario)")
+        request.predicate = predicate
         
         do{
-            if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK {
-
-            sqlite3_bind_int(statement, 1, IdDepartamento)
-
-            if sqlite3_step(statement) == SQLITE_DONE {
-                result.Correct = true
-            } else {
-                result.Correct = false
+            var result = try! context.fetch(request)
+            if result.count > 0 {
+                let usuario = result[0] as! NSManagedObject
+                context.delete(usuario)
+                /* usuario.setValue(Nombre, forKey: "nombre")
+                 usuario.setValue(Apaterno, forKey: "apellidoPaterno")
+                 usuario.setValue(Email, forKey: "email")
+                 usuario.setValue(Password, forKey: "password")*/
+                try! context.save()
+                print("Usuario Eliminado")
+                
+                
+                
             }
-            }
+        }*/
+    
+    
+    
+    func Update(usuario : Usuario, idUsuario : Int) -> Result{
+        
+        var result = Result()
+        do{
+            let context = appDelegate.persistentContainer.viewContext
+            let entidad = NSEntityDescription.entity(forEntityName: "Usuario", in: context)
+            let usuarioCoreData = NSManagedObject(entity: entidad!, insertInto: context)
+            
+            usuarioCoreData.setValue(usuario.UserName, forKey: "userName")
+            usuarioCoreData.setValue(usuario.Nombre, forKey: "nombre")
+            usuarioCoreData.setValue(usuario.ApellidoPaterno, forKey: "apellidoPaterno")
+            usuarioCoreData.setValue(usuario.ApellidoMaterno, forKey: "apellidoMaterno")
+            usuarioCoreData.setValue(usuario.Email, forKey: "email")
+            usuarioCoreData.setValue(usuario.Password, forKey: "password")
+            usuarioCoreData.setValue(usuario.FechaNacimiento, forKey: "fechaNacimiento")
+            usuarioCoreData.setValue(usuario.Sexo, forKey: "sexo")
+            usuarioCoreData.setValue(usuario.Telefono, forKey: "telefono")
+            usuarioCoreData.setValue(usuario.Celular, forKey: "celular")
+            usuarioCoreData.setValue(usuario.CURP, forKey: "curp")
+            
+            //context.updatedObjects(usuarioCoreData[idUsuario])
+            try! context.save()
+            result.Correct = true
+            
         }catch let error{
             result.Correct = false
             result.Ex = error
             result.ErrorMessage = error.localizedDescription
         }
         return result
-}
-    
-    
-    
-    /*---------  GETALL   --------*/
-    func GetAll() -> Result{
-        var result = Result()
-          let context = DB.init()
-          let query = "SELECT IdDepartamento, Nombre, IdArea FROM Departamento"
-          var statement : OpaquePointer? = nil
-          do{
-              if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK{
-                  
-                  result.Objects = []
-                  while sqlite3_step(statement) == SQLITE_ROW{
-                      var departamento = Departamento()
-                      departamento.IdDepartamento = Int(sqlite3_column_int(statement, 0))
-                      departamento.Nombre =   String(cString: sqlite3_column_text(statement, 1))
-                      departamento.Area = Area()
-                      departamento.Area!.IdArea = Int(sqlite3_column_int(statement, 2))
-                      
-                      result.Objects?.append(departamento)
-                  }
-                  result.Correct = true
-              }
-          }catch let error{
-              result.Correct = false
-              result.Ex = error
-              result.ErrorMessage = error.localizedDescription
-          }
-          return result
     }
-
     
     
     
-    
-    
-    /*---------  GETBYID   --------*/
-    func GetById(IdDepartamento: Int) -> Result{
+    func GetById(idUsuario : Int)-> Result{
         var result = Result()
-          let context = DB.init()
-          let query = "SELECT IdDepartamento, Nombre, IdArea FROM Departamento WHERE IdDepartamento = \(IdDepartamento)" //Revisar sentencia
-          var statement : OpaquePointer? = nil
-          do{
-              if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK{
-                  while sqlite3_step(statement) == SQLITE_ROW{
-                      var departamento = Departamento()
-                      departamento.IdDepartamento = Int(sqlite3_column_int(statement, 0))
-                      departamento.Nombre =   String(cString: sqlite3_column_text(statement, 1))
-                      departamento.Area = Area()
-                      departamento.Area?.IdArea = Int(sqlite3_column_int(statement, 2))
-                      
-                      result.Object = departamento
-                  }
-                  result.Correct = true
-              }
-          }catch let error{
-              result.Correct = false
-              result.Ex = error
-              result.ErrorMessage = error.localizedDescription
-          }
-          return result
+        
+        do{
+            let context = appDelegate.persistentContainer.viewContext
+            let entidad = NSFetchRequest<NSFetchRequestResult>(entityName: "Usuario")
+            let usuarioCoreData = try context.fetch(entidad) as! [NSManagedObject]
+            
+            let usuario = Usuario(
+                IdUsuario: Int(usuarioCoreData[idUsuario].objectID.uriRepresentation().absoluteString.components(separatedBy: "/p")[1])!,
+                UserName: usuarioCoreData[idUsuario].value(forKey: "userName") as! String,
+                Nombre: usuarioCoreData[idUsuario].value(forKey: "nombre") as! String,
+                ApellidoPaterno: usuarioCoreData[idUsuario].value(forKey: "apellidoPaterno") as! String,
+                ApellidoMaterno: usuarioCoreData[idUsuario].value(forKey: "apellidoMaterno") as! String,
+                Email: usuarioCoreData[idUsuario].value(forKey: "email") as! String,
+                Password: usuarioCoreData[idUsuario].value(forKey: "password") as! String,
+                FechaNacimiento: usuarioCoreData[idUsuario].value(forKey: "fechaNacimiento") as! Date,
+                Sexo: usuarioCoreData[idUsuario].value(forKey: "sexo") as! String,
+                Telefono: usuarioCoreData[idUsuario].value(forKey: "telefono") as! String,
+                Celular: usuarioCoreData[idUsuario].value(forKey: "celular") as! String,
+                CURP: usuarioCoreData[idUsuario].value(forKey: "curp") as! String,
+                Imagen: usuarioCoreData[idUsuario].value(forKey: "imagen") as! String)
+            
+            //usuarioCoreData.setValue(usuario.UserName, forKey: "userName")
+            //context.delete(usuarioCoreData[idUsuario])
+            
+            result.Object = usuario
+            result.Correct = true
+            
+        }catch let error{
+            result.Correct = false
+            result.Ex = error
+            result.ErrorMessage = error.localizedDescription
+        }
+        
+        return result
     }
+    
 }
