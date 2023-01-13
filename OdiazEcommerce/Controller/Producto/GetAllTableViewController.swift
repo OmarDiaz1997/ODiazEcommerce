@@ -153,47 +153,59 @@ class GetAllTableViewController: UITableViewController {
 
 extension GetAllTableViewController : SwipeTableViewCellDelegate{
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeCellKit.SwipeActionsOrientation) -> [SwipeCellKit.SwipeAction]? {
-        guard orientation == .right else { return nil }
-
-        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-           
-            let idProducto = self.productos[indexPath.row].IdProducto
-            //print("La Celda es el indice: \(indexPath.row) y el IdProducto es: \(idProducto)")
-            let result = self.productoViewModel.Delete(IdProducto: Int32(idProducto))
-            if result.Correct{
-                //Mensaje de Confirmacion
-                let alert = UIAlertController(title: "Confirmación", message: "Producto eliminado correctamente"+result.ErrorMessage, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "Cerrar", style: .default)
+        
+        if orientation == .right {
+            
+            //delete
+            let deleteAction = SwipeAction(style: .destructive, title: "Eliminar") { action, indexPath in
                 
-                let Aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: { action in
-                  })
+                self.idProducto = self.productos[indexPath.row].IdProducto
+                let result = self.productoViewModel.Delete(IdProducto: Int32(self.idProducto))
+                self.loadData()
                 
-                alert.addAction(ok)
-                alert.addAction(Aceptar)
-                self.present(alert,animated: false)
+                //ALERT
+                if result.Correct{
+                    let alert  = UIAlertController(title: "Confirmación", message: "Producto eliminado", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "Aceptar", style: .default)
+                    
+                    alert.addAction(ok)
+                    
+                    self.present(alert, animated: false)
+                    
+                }
+                else{
+                    let alertError  = UIAlertController(title: "Error", message: "Producto no eliminado", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Aceptar", style: .default)
+            
+            alertError.addAction(ok)
+            
+            self.present(alertError, animated: false)
+                    
+                }
             }
-            else{
-                let alert = UIAlertController(title: "Error", message: "El produto no se elimino correctamente " + result.ErrorMessage, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "Cerrar", style: .default)
+            deleteAction.image = UIImage(systemName: "trash")
+            return [deleteAction]
+            
+            
+        }else{
+            
+            //update
+            let updateAction = SwipeAction(style: .default, title: "Actualizar") { action, indexPath in
                 
-                let Aceptar = UIAlertAction(title: "Aceptar", style: .default, handler: { action in
-                  })
-                
-                alert.addAction(ok)
-                alert.addAction(Aceptar)
-                self.present(alert,animated: false)
+                self.idProducto = self.productos[indexPath.row].IdProducto
+                let result = self.performSegue(withIdentifier: "SegueUpdate", sender: self)
             }
-            self.loadData()
+            updateAction.image = UIImage(systemName: "repeat")
+            updateAction.backgroundColor = .blue
+            return [updateAction]
         }
-
-        deleteAction.image = UIImage(named: "delete")
-
-        return [deleteAction]
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "UpdateSegues"{
-            let productoForm = segue.destination as! ProductoForm
-            productoForm.IdProducto = self.idProducto
+        
+        if segue.identifier == "SegueUpdate"{
+            let productoFrom = segue.destination as! ProductoForm
+            productoFrom.idProducto = self.idProducto
         }
     }
 }

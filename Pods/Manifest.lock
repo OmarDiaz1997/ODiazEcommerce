@@ -1,16 +1,20 @@
 PODS:
+  - iOSDropDown (0.4.0)
   - SwipeCellKit (2.7.1)
 
 DEPENDENCIES:
+  - iOSDropDown
   - SwipeCellKit
 
 SPEC REPOS:
   trunk:
+    - iOSDropDown
     - SwipeCellKit
 
 SPEC CHECKSUMS:
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
-PODFILE CHECKSUM: a8cbd96e7d26f1c228bfb14c05c81eac524e799a
+PODFILE CHECKSUM: ca9e956b70989dbb116955e82d26e13a670ea0ed
 
 COCOAPODS: 1.11.3

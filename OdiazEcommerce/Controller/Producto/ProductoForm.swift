@@ -7,21 +7,34 @@
 
 import Foundation
 import UIKit
+import iOSDropDown
+
 class ProductoForm: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var NombreField: UITextField!
     @IBOutlet weak var PrecioUnitarioField: UITextField!
     @IBOutlet weak var StockField: UITextField!
-    @IBOutlet weak var ProveedorField: UITextField!
-    @IBOutlet weak var DepartamentoField: UITextField!
+    @IBOutlet weak var ProveedorField: DropDown!
+    @IBOutlet weak var DepartamentoField: DropDown!
     @IBOutlet weak var DescripcionField: UITextField!
     @IBOutlet weak var IdProductoField: UITextField!
+    @IBOutlet weak var AreaField: DropDown!
+    @IBOutlet weak var ActionButton: UIButton!
     
     let productoViewModel = ProductoViewModel()
     var productoModel : Producto? = nil
-    //var proveedorModel : Proveedor? = nil
-    //var departamentoModel : Departamento? = nil
-    var IdProducto : Int? = nil
+    
+    let proveedorViewModel = ProveedorViewModel()
+    var proveedorModel : Proveedor? = nil
+    
+    let departamentoViewModel = DepartamentoViewModel()
+    var departamentoModel : Departamento? = nil
+    
+    let areaViewModel = AreaViewModel()
+    var areaModel : Area? = nil
+
+    var idProducto : Int? = nil
+    var idDepartamento : Int? = nil
     
     
     
@@ -29,32 +42,76 @@ class ProductoForm: UIViewController, UIImagePickerControllerDelegate, UINavigat
     let imagePicker = UIImagePickerController()
     func viewdidLoad(){
         super .viewDidLoad()
+        AreaField.optionArray = [String]()
+        AreaField.optionIds = [Int]()
+        DepartamentoField.optionArray = [String]()
+        DepartamentoField.optionIds = [Int]()
+        
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.isEditing = false
-        validar()
+        Validar()
+        LoadDataArea()
+        AreaField.didSelect { selectedText, index, id in
+            self.LoadDataDepartamento(id)
+        }
+        DepartamentoField.didSelect { selectedText, index, id in
+            self.idDepartamento = id
+        }
+
     }
     
-    func validar(){
-        if IdProducto == nil{
-            //Mostrar buton que indique Agregar
-            //Mostar el formulario vacio
-            imageView.image = UIImage(named: "User")
-        }else
-        {
-            // Mostar buton que inque Actualizar
-            //Mostar el formulario precargado
-            //Uso del GetById
-            //CONVERTIR DE BASE64 a UIIMAGE
+    func LoadDataArea(){
+        let result = areaViewModel.GetAll()
+        if result.Correct{
+            for area in result.Objects as! [Area]{
+                AreaField.optionArray.append(area.Nombre)
+                AreaField.optionIds?.append(area.IdArea)
+            }
         }
     }
     
-    override func viewDidLoad() {
+    func LoadDataDepartamento(_ IdArea : Int){
+            let result = departamentoViewModel.GetByIdArea(IdArea)
+            if result.Correct{
+                DepartamentoField.optionArray = [String]()
+                DepartamentoField.optionIds = [Int]()
+                for departamento in result.Objects as! [Departamento]{
+                    DepartamentoField.optionArray.append(departamento.Nombre)
+                    DepartamentoField.optionIds?.append(departamento.IdDepartamento)
+                }
+            }
+        }
+    
+    func Validar(){
+        if self.idProducto == nil {
+            ActionButton.setTitle("Agregar", for: .normal)
+        }else{
+            ActionButton.setTitle("Actualizar", for: .normal)
+            
+            let result : Result = productoViewModel.GetById(IdProducto: Int32(idProducto!))
+            if result.Correct{
+                let producto = result.Object! as! Producto
+                
+                NombreField.text = producto.Nombre
+                PrecioUnitarioField.text = String(producto.PrecioUnitario)
+                StockField.text = String(producto.Stock)
+                DescripcionField.text = producto.Descripcion
+                //AreaTextField.text = String(producto.Area!.IdArea)
+            }else{
+                print("Error")
+            }
+        }
+    }
+    
+    /*override func viewDidLoad() {
         super.viewDidLoad()
         IdProductoField.isHidden = false
         
-    }
+    }*/
     
+    
+
     
     
     @IBAction func ActionButton(_ sender: UIButton) {

@@ -32,6 +32,8 @@
 		EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C4295D1687006512E8 /* Proveedor.swift */; };
 		EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C6295D16D0006512E8 /* Departamento.swift */; };
 		EF7D60C9295D16E6006512E8 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D60C8295D16E6006512E8 /* Area.swift */; };
+		EF8002692970884200A2B3EB /* ProveedorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8002682970884200A2B3EB /* ProveedorViewModel.swift */; };
+		EF80026D29708B2200A2B3EB /* AreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF80026C29708B2200A2B3EB /* AreaViewModel.swift */; };
 		EF8BCFA4296BA5CF0085E955 /* DepartamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA3296BA5CF0085E955 /* DepartamentoViewController.swift */; };
 		EF8BCFA6296BA6770085E955 /* GetAllDepartamentoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */; };
 		EF8BCFAA296BABCB0085E955 /* DepartamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */; };
@@ -71,6 +73,8 @@
 		EF7D60C4295D1687006512E8 /* Proveedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proveedor.swift; sourceTree = "<group>"; };
 		EF7D60C6295D16D0006512E8 /* Departamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departamento.swift; sourceTree = "<group>"; };
 		EF7D60C8295D16E6006512E8 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		EF8002682970884200A2B3EB /* ProveedorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProveedorViewModel.swift; sourceTree = "<group>"; };
+		EF80026C29708B2200A2B3EB /* AreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewModel.swift; sourceTree = "<group>"; };
 		EF8BCFA3296BA5CF0085E955 /* DepartamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoViewController.swift; sourceTree = "<group>"; };
 		EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllDepartamentoTableViewController.swift; sourceTree = "<group>"; };
 		EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoViewModel.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 		EF7D60B7295CAAEB006512E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF80026F29708FE100A2B3EB /* Area */,
+				EF80026E29708FD700A2B3EB /* Proveedor */,
 				EF3F4782296CE7A300681A07 /* Usuario */,
 				EF8BCFA8296BAB7E0085E955 /* Departamento */,
 				EF8BCFA7296BAB600085E955 /* Producto */,
@@ -209,6 +215,22 @@
 			);
 			name = Controller;
 			path = OdiazEcommerce/Controller;
+			sourceTree = "<group>";
+		};
+		EF80026E29708FD700A2B3EB /* Proveedor */ = {
+			isa = PBXGroup;
+			children = (
+				EF8002682970884200A2B3EB /* ProveedorViewModel.swift */,
+			);
+			path = Proveedor;
+			sourceTree = "<group>";
+		};
+		EF80026F29708FE100A2B3EB /* Area */ = {
+			isa = PBXGroup;
+			children = (
+				EF80026C29708B2200A2B3EB /* AreaViewModel.swift */,
+			);
+			path = Area;
 			sourceTree = "<group>";
 		};
 		EF8BCFA1296BA4BC0085E955 /* Producto */ = {
@@ -422,6 +444,7 @@
 				EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */,
 				EF7D60A0295CAAA8006512E8 /* AppDelegate.swift in Sources */,
 				EF8BCFB4296BCF630085E955 /* DepartamentoTableViewCell.swift in Sources */,
+				EF80026D29708B2200A2B3EB /* AreaViewModel.swift in Sources */,
 				EF8BCFA6296BA6770085E955 /* GetAllDepartamentoTableViewController.swift in Sources */,
 				EF8BCFAA296BABCB0085E955 /* DepartamentoViewModel.swift in Sources */,
 				EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */,
@@ -431,6 +454,7 @@
 				EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */,
 				EF8BCFA4296BA5CF0085E955 /* DepartamentoViewController.swift in Sources */,
 				EF7D60C3295CF5EB006512E8 /* ProductoViewModel.swift in Sources */,
+				EF8002692970884200A2B3EB /* ProveedorViewModel.swift in Sources */,
 				EF7D60C9295D16E6006512E8 /* Area.swift in Sources */,
 				EF7D60A2295CAAA8006512E8 /* SceneDelegate.swift in Sources */,
 			);
