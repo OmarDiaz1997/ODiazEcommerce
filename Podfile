@@ -8,5 +8,7 @@ target 'OdiazEcommerce' do
   # Pods for OdiazEcommerce
 pod 'SwipeCellKit'
 pod 'iOSDropDown'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
 
 end

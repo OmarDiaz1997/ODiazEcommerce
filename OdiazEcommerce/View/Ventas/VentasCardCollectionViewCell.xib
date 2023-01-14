@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VentasCardCollectionViewCell" customModule="OdiazEcommerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="301" height="151"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="301" height="151"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-Ga-azq">
+                        <rect key="frame" x="0.0" y="0.0" width="301" height="151"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NtT-Ov-EIC">
+                                <rect key="frame" x="25" y="25" width="100" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6d6-V2-V8j"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mv-Th-TED">
+                                <rect key="frame" x="143" y="44" width="150" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Qug-FU-HKl"/>
+                                    <constraint firstAttribute="width" constant="150" id="YlO-TR-hU4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NtT-Ov-EIC" firstAttribute="leading" secondItem="aa4-Ga-azq" secondAttribute="leading" constant="25" id="4Xg-jA-aK0"/>
+                            <constraint firstItem="7Mv-Th-TED" firstAttribute="leading" secondItem="NtT-Ov-EIC" secondAttribute="trailing" constant="18" id="FvA-vP-og3"/>
+                            <constraint firstAttribute="bottom" secondItem="7Mv-Th-TED" secondAttribute="bottom" constant="44" id="I9a-lv-J82"/>
+                            <constraint firstItem="NtT-Ov-EIC" firstAttribute="top" secondItem="aa4-Ga-azq" secondAttribute="top" constant="25" id="IWL-nC-XZG"/>
+                            <constraint firstAttribute="bottom" secondItem="NtT-Ov-EIC" secondAttribute="bottom" constant="25" id="K8J-KV-EUb"/>
+                            <constraint firstItem="7Mv-Th-TED" firstAttribute="top" secondItem="aa4-Ga-azq" secondAttribute="top" constant="44" id="sZa-zZ-dvc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aa4-Ga-azq" secondAttribute="trailing" id="2x9-sa-iGW"/>
+                <constraint firstAttribute="bottom" secondItem="aa4-Ga-azq" secondAttribute="bottom" id="WAg-CY-P7g"/>
+                <constraint firstItem="aa4-Ga-azq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Y0L-pI-zuq"/>
+                <constraint firstItem="aa4-Ga-azq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fbx-uj-8wf"/>
+            </constraints>
+            <size key="customSize" width="236" height="204"/>
+            <point key="canvasLocation" x="280.15267175572518" y="74.295774647887328"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

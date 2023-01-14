@@ -38,6 +38,14 @@
 		EF8BCFA6296BA6770085E955 /* GetAllDepartamentoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */; };
 		EF8BCFAA296BABCB0085E955 /* DepartamentoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */; };
 		EF8BCFB4296BCF630085E955 /* DepartamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */; };
+		EF8C59A62971BC3D0064E1C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF8C59A52971BC3D0064E1C3 /* GoogleService-Info.plist */; };
+		EF8C59AB2971C9CE0064E1C3 /* AuthUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C59AA2971C9CE0064E1C3 /* AuthUsuarioViewController.swift */; };
+		EFBB17802972288B00FBDB2B /* VentasCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB177E2972288B00FBDB2B /* VentasCardCollectionViewCell.swift */; };
+		EFBB17812972288B00FBDB2B /* VentasCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFBB177F2972288B00FBDB2B /* VentasCardCollectionViewCell.xib */; };
+		EFBB17862972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB17842972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift */; };
+		EFBB17872972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFBB17852972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib */; };
+		EFBB178A297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB1788297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift */; };
+		EFBB178B297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFBB1789297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib */; };
 		EFC7F4BF2968D0F100612E43 /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F4BE2968D0F100612E43 /* User.png */; };
 		EFC7F4C32968EDF500612E43 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4C22968EDF500612E43 /* Usuario.swift */; };
 		EFD862152964AD15006F7DCA /* User.webp in Resources */ = {isa = PBXBuildFile; fileRef = EFD862142964AD15006F7DCA /* User.webp */; };
@@ -79,6 +87,14 @@
 		EF8BCFA5296BA6770085E955 /* GetAllDepartamentoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllDepartamentoTableViewController.swift; sourceTree = "<group>"; };
 		EF8BCFA9296BABCB0085E955 /* DepartamentoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoViewModel.swift; sourceTree = "<group>"; };
 		EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoTableViewCell.swift; sourceTree = "<group>"; };
+		EF8C59A52971BC3D0064E1C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF8C59AA2971C9CE0064E1C3 /* AuthUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUsuarioViewController.swift; sourceTree = "<group>"; };
+		EFBB177E2972288B00FBDB2B /* VentasCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFBB177F2972288B00FBDB2B /* VentasCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VentasCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFBB17842972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoVentasCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFBB17852972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartamentoVentasCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFBB1788297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoVentasCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFBB1789297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoVentasCollectionViewCell.xib; sourceTree = "<group>"; };
 		EFC7F4BE2968D0F100612E43 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
 		EFC7F4C22968EDF500612E43 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		EFD862142964AD15006F7DCA /* User.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = User.webp; sourceTree = "<group>"; };
@@ -119,6 +135,7 @@
 				EF3F4780296CE67C00681A07 /* UsuarioFromController.swift */,
 				EF6EB4F3296DE0AC000CBBF2 /* UsuarioTableViewCelda.swift */,
 				EF6EB4F9296DF147000CBBF2 /* GetAllUsuarioTableViewController.swift */,
+				EF8C59AA2971C9CE0064E1C3 /* AuthUsuarioViewController.swift */,
 			);
 			path = Usuario;
 			sourceTree = "<group>";
@@ -162,6 +179,7 @@
 				EF7D60AB295CAAAC006512E8 /* Assets.xcassets */,
 				EFC7F4BE2968D0F100612E43 /* User.png */,
 				EF7D60B0295CAAAC006512E8 /* Info.plist */,
+				EF8C59A52971BC3D0064E1C3 /* GoogleService-Info.plist */,
 				EF7D60A8295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld */,
 			);
 			path = OdiazEcommerce;
@@ -195,6 +213,7 @@
 		EF7D60B8295CAB0F006512E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFBB178229722FFA00FBDB2B /* Ventas */,
 				EF9B961E296DD44C00264D49 /* Usuario */,
 				EF8BCFAD296BCDB10085E955 /* Departamento */,
 				EF8BCFAC296BCD9C0085E955 /* Producto */,
@@ -209,6 +228,7 @@
 		EF7D60B9295CAB22006512E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EFBB17832972302800FBDB2B /* Ventas */,
 				EF3F477F296CE5FB00681A07 /* Usuario */,
 				EF8BCFA2296BA4DA0085E955 /* Departamento */,
 				EF8BCFA1296BA4BC0085E955 /* Producto */,
@@ -293,6 +313,26 @@
 			path = Usuario;
 			sourceTree = "<group>";
 		};
+		EFBB178229722FFA00FBDB2B /* Ventas */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB177F2972288B00FBDB2B /* VentasCardCollectionViewCell.xib */,
+				EFBB17852972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib */,
+				EFBB1789297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib */,
+			);
+			path = Ventas;
+			sourceTree = "<group>";
+		};
+		EFBB17832972302800FBDB2B /* Ventas */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB17842972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift */,
+				EFBB177E2972288B00FBDB2B /* VentasCardCollectionViewCell.swift */,
+				EFBB1788297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift */,
+			);
+			path = Ventas;
+			sourceTree = "<group>";
+		};
 		EFC7F4C02968EDAD00612E43 /* Producto */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +370,8 @@
 			dependencies = (
 			);
 			name = OdiazEcommerce;
+			packageProductDependencies = (
+			);
 			productName = OdiazEcommerce;
 			productReference = EF7D609C295CAAA8006512E8 /* OdiazEcommerce.app */;
 			productType = "com.apple.product-type.application";
@@ -358,6 +400,8 @@
 				Base,
 			);
 			mainGroup = EF7D6093295CAAA8006512E8;
+			packageReferences = (
+			);
 			productRefGroup = EF7D609D295CAAA8006512E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -374,10 +418,14 @@
 			files = (
 				EFC7F4BF2968D0F100612E43 /* User.png in Resources */,
 				EF6EB4F6296DE0AC000CBBF2 /* UsuarioTableViewCelda.xib in Resources */,
+				EF8C59A62971BC3D0064E1C3 /* GoogleService-Info.plist in Resources */,
+				EFBB17872972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib in Resources */,
 				EF7D60AF295CAAAC006512E8 /* LaunchScreen.storyboard in Resources */,
 				EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */,
 				EF7D60AC295CAAAC006512E8 /* Assets.xcassets in Resources */,
+				EFBB17812972288B00FBDB2B /* VentasCardCollectionViewCell.xib in Resources */,
 				EFD862152964AD15006F7DCA /* User.webp in Resources */,
+				EFBB178B297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib in Resources */,
 				EF6EB4F0296DD70B000CBBF2 /* DepartamentoTableViewCell.xib in Resources */,
 				EF7D60A7295CAAA8006512E8 /* Main.storyboard in Resources */,
 			);
@@ -433,14 +481,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6EB4F5296DE0AC000CBBF2 /* UsuarioTableViewCelda.swift in Sources */,
+				EFBB17862972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift in Sources */,
 				EF3F4784296CE7E600681A07 /* UsuarioViewModel.swift in Sources */,
 				EF7D60BD295CF45B006512E8 /* Result.swift in Sources */,
+				EF8C59AB2971C9CE0064E1C3 /* AuthUsuarioViewController.swift in Sources */,
 				EF6EB4FA296DF147000CBBF2 /* GetAllUsuarioTableViewController.swift in Sources */,
 				EF7D60C1295CF53E006512E8 /* ProductoForm.swift in Sources */,
 				EF3F4781296CE67C00681A07 /* UsuarioFromController.swift in Sources */,
 				EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */,
 				EF7D60A4295CAAA8006512E8 /* ViewController.swift in Sources */,
 				EF7D60BF295CF4A2006512E8 /* Producto.swift in Sources */,
+				EFBB178A297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift in Sources */,
 				EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */,
 				EF7D60A0295CAAA8006512E8 /* AppDelegate.swift in Sources */,
 				EF8BCFB4296BCF630085E955 /* DepartamentoTableViewCell.swift in Sources */,
@@ -449,6 +500,7 @@
 				EF8BCFAA296BABCB0085E955 /* DepartamentoViewModel.swift in Sources */,
 				EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */,
 				EFC7F4C32968EDF500612E43 /* Usuario.swift in Sources */,
+				EFBB17802972288B00FBDB2B /* VentasCardCollectionViewCell.swift in Sources */,
 				EF7D60AA295CAAA8006512E8 /* OdiazEcommerce.xcdatamodeld in Sources */,
 				EF7D60BB295CAB59006512E8 /* DB.swift in Sources */,
 				EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */,

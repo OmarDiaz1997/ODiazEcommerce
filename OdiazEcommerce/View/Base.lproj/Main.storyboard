@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="24q-OV-qUf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I8m-wQ-qak">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -141,7 +141,7 @@
         <!--Producto Form-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ProductoForm" customModule="OdiazEcommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProductoForm" customModule="OdiazEcommerce" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -661,10 +661,10 @@
             </objects>
             <point key="canvasLocation" x="1763" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Auth Usuario View Controller-->
         <scene sceneID="h4q-4B-5eK">
             <objects>
-                <viewController id="Cdc-Ja-iqk" sceneMemberID="viewController">
+                <viewController id="Cdc-Ja-iqk" customClass="AuthUsuarioViewController" customModule="OdiazEcommerce" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vGJ-Nj-6h8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -689,13 +689,13 @@
                                         <rect key="frame" x="8" y="8" width="285" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSP-EJ-uXu">
                                         <rect key="frame" x="8" y="50" width="285" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYG-Fc-Sw5">
                                         <rect key="frame" x="8" y="100" width="285" height="35"/>
@@ -704,6 +704,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Iniciar sesión">
                                             <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="LogInButtonAction:" destination="Cdc-Ja-iqk" eventType="touchUpInside" id="Cqi-Za-Mh6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzH-9F-pmS">
                                         <rect key="frame" x="8" y="143" width="285" height="35"/>
@@ -718,7 +721,7 @@
                                         <rect key="frame" x="8" y="186" width="285" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                        <buttonConfiguration key="configuration" style="filled" title="Iniciar con Apple">
                                             <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                         </buttonConfiguration>
                                     </button>
@@ -742,6 +745,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Crear cuenta"/>
+                                <connections>
+                                    <action selector="SingInActionButton:" destination="Cdc-Ja-iqk" eventType="touchUpInside" id="1dB-zI-mxe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿No tienes cuenta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edN-wg-X2a">
                                 <rect key="frame" x="123" y="754" width="146" height="21"/>
@@ -764,6 +770,12 @@
                             <constraint firstItem="7B0-Kl-Xa2" firstAttribute="centerX" secondItem="dPF-32-QTF" secondAttribute="centerX" id="suo-11-uL5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="EmailTextField" destination="0Hn-Gp-Hw5" id="HwW-Wy-Kad"/>
+                        <outlet property="LoginButton" destination="iYG-Fc-Sw5" id="QsD-Oq-wzh"/>
+                        <outlet property="PasswordTextField" destination="jSP-EJ-uXu" id="Dbh-7w-YDQ"/>
+                        <outlet property="SingUpButton" destination="qZu-ZG-npD" id="H1O-3X-ddZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSW-5d-zdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -814,7 +826,7 @@
     <resources>
         <image name="camera.circle.fill" catalog="system" width="128" height="123"/>
         <image name="ecommerce" width="1000" height="687"/>
-        <image name="icon" width="300" height="240"/>
+        <image name="icon" width="1024" height="1024"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

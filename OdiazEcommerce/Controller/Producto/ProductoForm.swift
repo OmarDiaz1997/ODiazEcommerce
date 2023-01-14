@@ -40,27 +40,27 @@ class ProductoForm: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
-    func viewdidLoad(){
-        super .viewDidLoad()
-        AreaField.optionArray = [String]()
-        AreaField.optionIds = [Int]()
-        DepartamentoField.optionArray = [String]()
-        DepartamentoField.optionIds = [Int]()
-        
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.isEditing = false
-        Validar()
-        LoadDataArea()
-        AreaField.didSelect { selectedText, index, id in
-            self.LoadDataDepartamento(id)
-        }
-        DepartamentoField.didSelect { selectedText, index, id in
-            self.idDepartamento = id
-        }
-
-    }
     
+    override func viewDidLoad() {
+        super .viewDidLoad()
+               AreaField.optionArray = [String]()
+               AreaField.optionIds = [Int]()
+               DepartamentoField.optionArray = [String]()
+               DepartamentoField.optionIds = [Int]()
+               
+               imagePicker.delegate = self
+               imagePicker.sourceType = .photoLibrary
+               imagePicker.isEditing = false
+               Validar()
+               LoadDataArea()
+               AreaField.didSelect { selectedText, index, id in
+                   self.LoadDataDepartamento(id)
+               }
+               DepartamentoField.didSelect { selectedText, index, id in
+                   self.idDepartamento = id
+               }
+    }
+
     func LoadDataArea(){
         let result = areaViewModel.GetAll()
         if result.Correct{
@@ -103,14 +103,6 @@ class ProductoForm: UIViewController, UIImagePickerControllerDelegate, UINavigat
             }
         }
     }
-    
-    /*override func viewDidLoad() {
-        super.viewDidLoad()
-        IdProductoField.isHidden = false
-        
-    }*/
-    
-    
 
     
     
