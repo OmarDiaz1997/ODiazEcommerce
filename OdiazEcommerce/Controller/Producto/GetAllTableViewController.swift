@@ -21,14 +21,6 @@ class GetAllTableViewController: UITableViewController {
         print("ViewDidLoad")
         loadData()
 
-        //self.tableView.estimatedRowHeight = 250
-        //self.tableView.rowHeight = UITableView.automaticDimension
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     
@@ -70,6 +62,8 @@ class GetAllTableViewController: UITableViewController {
             self.present(alert,animated: false)
         }
     }
+    
+
 
     // MARK: - Table view data source
 
@@ -88,7 +82,7 @@ class GetAllTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductoCell", for: indexPath) as! ProductoTableViewCell
 
         // Configure the cell...
-        //cell.delegate = self
+        cell.delegate = self
         cell.IdProductolbl.text = String(productos[indexPath.row].IdProducto)
         cell.NombreField.text = productos[indexPath.row].Nombre
         cell.PrecioUnitarioField.text = String(productos[indexPath.row].PrecioUnitario)

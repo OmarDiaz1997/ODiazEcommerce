@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C89F6682421CCD19445730F7 /* Pods_OdiazEcommerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BEE3CDBC7F24AFCFC7FE2C /* Pods_OdiazEcommerce.framework */; };
+		EF30CA832975B7CF00A843CB /* GetAllAreaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30CA822975B7CF00A843CB /* GetAllAreaCollectionViewController.swift */; };
+		EF30CA862975D92700A843CB /* GetByIdAreaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30CA852975D92700A843CB /* GetByIdAreaCollectionViewController.swift */; };
+		EF30CA892975FAEB00A843CB /* GetByIdDepartamentoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30CA882975FAEB00A843CB /* GetByIdDepartamentoCollectionViewController.swift */; };
 		EF3F4781296CE67C00681A07 /* UsuarioFromController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F4780296CE67C00681A07 /* UsuarioFromController.swift */; };
 		EF3F4784296CE7E600681A07 /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F4783296CE7E600681A07 /* UsuarioViewModel.swift */; };
 		EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */; };
@@ -40,21 +43,44 @@
 		EF8BCFB4296BCF630085E955 /* DepartamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */; };
 		EF8C59A62971BC3D0064E1C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF8C59A52971BC3D0064E1C3 /* GoogleService-Info.plist */; };
 		EF8C59AB2971C9CE0064E1C3 /* AuthUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C59AA2971C9CE0064E1C3 /* AuthUsuarioViewController.swift */; };
+		EFA2E44C2979A6B500473CF4 /* GetAllAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2E44B2979A6B500473CF4 /* GetAllAreaViewController.swift */; };
+		EFA9CCDA297724540052D6C4 /* OdiazEcommerceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9CCD9297724540052D6C4 /* OdiazEcommerceUITests.swift */; };
+		EFA9CCDC297724540052D6C4 /* OdiazEcommerceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9CCDB297724540052D6C4 /* OdiazEcommerceUITestsLaunchTests.swift */; };
+		EFA9CCE9297724740052D6C4 /* OdiazEcommerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9CCE8297724740052D6C4 /* OdiazEcommerceTests.swift */; };
 		EFBB17802972288B00FBDB2B /* VentasCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB177E2972288B00FBDB2B /* VentasCardCollectionViewCell.swift */; };
 		EFBB17812972288B00FBDB2B /* VentasCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFBB177F2972288B00FBDB2B /* VentasCardCollectionViewCell.xib */; };
-		EFBB17862972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB17842972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift */; };
-		EFBB17872972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFBB17852972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib */; };
 		EFBB178A297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB1788297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift */; };
 		EFBB178B297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFBB1789297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib */; };
 		EFC7F4BF2968D0F100612E43 /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F4BE2968D0F100612E43 /* User.png */; };
 		EFC7F4C32968EDF500612E43 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4C22968EDF500612E43 /* Usuario.swift */; };
+		EFCAF2CC2979D2AE002F6D5A /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAF2CB2979D2AE002F6D5A /* FirebaseViewModel.swift */; };
 		EFD862152964AD15006F7DCA /* User.webp in Resources */ = {isa = PBXBuildFile; fileRef = EFD862142964AD15006F7DCA /* User.webp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFA9CCDD297724540052D6C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF7D6094295CAAA8006512E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF7D609B295CAAA8006512E8;
+			remoteInfo = OdiazEcommerce;
+		};
+		EFA9CCEA297724740052D6C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF7D6094295CAAA8006512E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF7D609B295CAAA8006512E8;
+			remoteInfo = OdiazEcommerce;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8E1F956B53AFFECC12D06385 /* Pods-OdiazEcommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OdiazEcommerce.debug.xcconfig"; path = "Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce.debug.xcconfig"; sourceTree = "<group>"; };
 		931EED727AB836862B586E2C /* Pods-OdiazEcommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OdiazEcommerce.release.xcconfig"; path = "Target Support Files/Pods-OdiazEcommerce/Pods-OdiazEcommerce.release.xcconfig"; sourceTree = "<group>"; };
 		C5BEE3CDBC7F24AFCFC7FE2C /* Pods_OdiazEcommerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OdiazEcommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF30CA822975B7CF00A843CB /* GetAllAreaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllAreaCollectionViewController.swift; sourceTree = "<group>"; };
+		EF30CA852975D92700A843CB /* GetByIdAreaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetByIdAreaCollectionViewController.swift; sourceTree = "<group>"; };
+		EF30CA882975FAEB00A843CB /* GetByIdDepartamentoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetByIdDepartamentoCollectionViewController.swift; sourceTree = "<group>"; };
 		EF3F4780296CE67C00681A07 /* UsuarioFromController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioFromController.swift; sourceTree = "<group>"; };
 		EF3F4783296CE7E600681A07 /* UsuarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewModel.swift; sourceTree = "<group>"; };
 		EF59A0D2295F76EE00EDB7C6 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
@@ -89,14 +115,19 @@
 		EF8BCFB2296BCF630085E955 /* DepartamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoTableViewCell.swift; sourceTree = "<group>"; };
 		EF8C59A52971BC3D0064E1C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF8C59AA2971C9CE0064E1C3 /* AuthUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUsuarioViewController.swift; sourceTree = "<group>"; };
+		EFA2E44B2979A6B500473CF4 /* GetAllAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllAreaViewController.swift; sourceTree = "<group>"; };
+		EFA9CCD7297724540052D6C4 /* OdiazEcommerceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdiazEcommerceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA9CCD9297724540052D6C4 /* OdiazEcommerceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdiazEcommerceUITests.swift; sourceTree = "<group>"; };
+		EFA9CCDB297724540052D6C4 /* OdiazEcommerceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdiazEcommerceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EFA9CCE6297724740052D6C4 /* OdiazEcommerceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdiazEcommerceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA9CCE8297724740052D6C4 /* OdiazEcommerceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdiazEcommerceTests.swift; sourceTree = "<group>"; };
 		EFBB177E2972288B00FBDB2B /* VentasCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFBB177F2972288B00FBDB2B /* VentasCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VentasCardCollectionViewCell.xib; sourceTree = "<group>"; };
-		EFBB17842972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartamentoVentasCollectionViewCell.swift; sourceTree = "<group>"; };
-		EFBB17852972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartamentoVentasCollectionViewCell.xib; sourceTree = "<group>"; };
 		EFBB1788297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoVentasCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFBB1789297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductoVentasCollectionViewCell.xib; sourceTree = "<group>"; };
 		EFC7F4BE2968D0F100612E43 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
 		EFC7F4C22968EDF500612E43 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		EFCAF2CB2979D2AE002F6D5A /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		EFD862142964AD15006F7DCA /* User.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = User.webp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +137,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C89F6682421CCD19445730F7 /* Pods_OdiazEcommerce.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA9CCD4297724540052D6C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA9CCE3297724740052D6C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +172,32 @@
 				C5BEE3CDBC7F24AFCFC7FE2C /* Pods_OdiazEcommerce.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF30CA812975B61600A843CB /* Area */ = {
+			isa = PBXGroup;
+			children = (
+				EF30CA822975B7CF00A843CB /* GetAllAreaCollectionViewController.swift */,
+				EFA2E44B2979A6B500473CF4 /* GetAllAreaViewController.swift */,
+			);
+			path = Area;
+			sourceTree = "<group>";
+		};
+		EF30CA842975D84800A843CB /* Departamento */ = {
+			isa = PBXGroup;
+			children = (
+				EF30CA852975D92700A843CB /* GetByIdAreaCollectionViewController.swift */,
+			);
+			path = Departamento;
+			sourceTree = "<group>";
+		};
+		EF30CA872975FA8E00A843CB /* Producto */ = {
+			isa = PBXGroup;
+			children = (
+				EFBB1788297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift */,
+				EF30CA882975FAEB00A843CB /* GetByIdDepartamentoCollectionViewController.swift */,
+			);
+			path = Producto;
 			sourceTree = "<group>";
 		};
 		EF3F477F296CE5FB00681A07 /* Usuario */ = {
@@ -156,6 +227,8 @@
 				EF7D60B7295CAAEB006512E8 /* ViewModel */,
 				EF7D60B6295CAADB006512E8 /* Model */,
 				EF7D609E295CAAA8006512E8 /* OdiazEcommerce */,
+				EFA9CCD8297724540052D6C4 /* OdiazEcommerceUITests */,
+				EFA9CCE7297724740052D6C4 /* OdiazEcommerceTests */,
 				EF7D609D295CAAA8006512E8 /* Products */,
 				7B5C619AB5E453A13F4B973A /* Pods */,
 				8FFC8D672F21082E4F9B9297 /* Frameworks */,
@@ -166,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				EF7D609C295CAAA8006512E8 /* OdiazEcommerce.app */,
+				EFA9CCD7297724540052D6C4 /* OdiazEcommerceUITests.xctest */,
+				EFA9CCE6297724740052D6C4 /* OdiazEcommerceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +274,7 @@
 		EF7D60B7295CAAEB006512E8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EFCAF2CA2979D255002F6D5A /* Firebase */,
 				EF80026F29708FE100A2B3EB /* Area */,
 				EF80026E29708FD700A2B3EB /* Proveedor */,
 				EF3F4782296CE7A300681A07 /* Usuario */,
@@ -313,11 +389,27 @@
 			path = Usuario;
 			sourceTree = "<group>";
 		};
+		EFA9CCD8297724540052D6C4 /* OdiazEcommerceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFA9CCD9297724540052D6C4 /* OdiazEcommerceUITests.swift */,
+				EFA9CCDB297724540052D6C4 /* OdiazEcommerceUITestsLaunchTests.swift */,
+			);
+			path = OdiazEcommerceUITests;
+			sourceTree = "<group>";
+		};
+		EFA9CCE7297724740052D6C4 /* OdiazEcommerceTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFA9CCE8297724740052D6C4 /* OdiazEcommerceTests.swift */,
+			);
+			path = OdiazEcommerceTests;
+			sourceTree = "<group>";
+		};
 		EFBB178229722FFA00FBDB2B /* Ventas */ = {
 			isa = PBXGroup;
 			children = (
 				EFBB177F2972288B00FBDB2B /* VentasCardCollectionViewCell.xib */,
-				EFBB17852972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib */,
 				EFBB1789297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib */,
 			);
 			path = Ventas;
@@ -326,9 +418,10 @@
 		EFBB17832972302800FBDB2B /* Ventas */ = {
 			isa = PBXGroup;
 			children = (
-				EFBB17842972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift */,
+				EF30CA872975FA8E00A843CB /* Producto */,
 				EFBB177E2972288B00FBDB2B /* VentasCardCollectionViewCell.swift */,
-				EFBB1788297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift */,
+				EF30CA842975D84800A843CB /* Departamento */,
+				EF30CA812975B61600A843CB /* Area */,
 			);
 			path = Ventas;
 			sourceTree = "<group>";
@@ -352,6 +445,14 @@
 			path = Usuario;
 			sourceTree = "<group>";
 		};
+		EFCAF2CA2979D255002F6D5A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAF2CB2979D2AE002F6D5A /* FirebaseViewModel.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,6 +465,7 @@
 				EF7D6099295CAAA8006512E8 /* Frameworks */,
 				EF7D609A295CAAA8006512E8 /* Resources */,
 				152E2B8C26D6271EA0A62B77 /* [CP] Embed Pods Frameworks */,
+				EF7D10C429788337005D2ADE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -375,6 +477,42 @@
 			productName = OdiazEcommerce;
 			productReference = EF7D609C295CAAA8006512E8 /* OdiazEcommerce.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EFA9CCD6297724540052D6C4 /* OdiazEcommerceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFA9CCDF297724540052D6C4 /* Build configuration list for PBXNativeTarget "OdiazEcommerceUITests" */;
+			buildPhases = (
+				EFA9CCD3297724540052D6C4 /* Sources */,
+				EFA9CCD4297724540052D6C4 /* Frameworks */,
+				EFA9CCD5297724540052D6C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFA9CCDE297724540052D6C4 /* PBXTargetDependency */,
+			);
+			name = OdiazEcommerceUITests;
+			productName = OdiazEcommerceUITests;
+			productReference = EFA9CCD7297724540052D6C4 /* OdiazEcommerceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		EFA9CCE5297724740052D6C4 /* OdiazEcommerceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFA9CCEC297724740052D6C4 /* Build configuration list for PBXNativeTarget "OdiazEcommerceTests" */;
+			buildPhases = (
+				EFA9CCE2297724740052D6C4 /* Sources */,
+				EFA9CCE3297724740052D6C4 /* Frameworks */,
+				EFA9CCE4297724740052D6C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFA9CCEB297724740052D6C4 /* PBXTargetDependency */,
+			);
+			name = OdiazEcommerceTests;
+			productName = OdiazEcommerceTests;
+			productReference = EFA9CCE6297724740052D6C4 /* OdiazEcommerceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -388,6 +526,14 @@
 				TargetAttributes = {
 					EF7D609B295CAAA8006512E8 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					EFA9CCD6297724540052D6C4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EF7D609B295CAAA8006512E8;
+					};
+					EFA9CCE5297724740052D6C4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EF7D609B295CAAA8006512E8;
 					};
 				};
 			};
@@ -407,6 +553,8 @@
 			projectRoot = "";
 			targets = (
 				EF7D609B295CAAA8006512E8 /* OdiazEcommerce */,
+				EFA9CCD6297724540052D6C4 /* OdiazEcommerceUITests */,
+				EFA9CCE5297724740052D6C4 /* OdiazEcommerceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -419,7 +567,6 @@
 				EFC7F4BF2968D0F100612E43 /* User.png in Resources */,
 				EF6EB4F6296DE0AC000CBBF2 /* UsuarioTableViewCelda.xib in Resources */,
 				EF8C59A62971BC3D0064E1C3 /* GoogleService-Info.plist in Resources */,
-				EFBB17872972306600FBDB2B /* DepartamentoVentasCollectionViewCell.xib in Resources */,
 				EF7D60AF295CAAAC006512E8 /* LaunchScreen.storyboard in Resources */,
 				EF59A0D7295F773A00EDB7C6 /* ProductoTableViewCell.xib in Resources */,
 				EF7D60AC295CAAAC006512E8 /* Assets.xcassets in Resources */,
@@ -428,6 +575,20 @@
 				EFBB178B297231C800FBDB2B /* ProductoVentasCollectionViewCell.xib in Resources */,
 				EF6EB4F0296DD70B000CBBF2 /* DepartamentoTableViewCell.xib in Resources */,
 				EF7D60A7295CAAA8006512E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA9CCD5297724540052D6C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA9CCE4297724740052D6C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +634,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EF7D10C429788337005D2ADE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -481,7 +661,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6EB4F5296DE0AC000CBBF2 /* UsuarioTableViewCelda.swift in Sources */,
-				EFBB17862972306600FBDB2B /* DepartamentoVentasCollectionViewCell.swift in Sources */,
 				EF3F4784296CE7E600681A07 /* UsuarioViewModel.swift in Sources */,
 				EF7D60BD295CF45B006512E8 /* Result.swift in Sources */,
 				EF8C59AB2971C9CE0064E1C3 /* AuthUsuarioViewController.swift in Sources */,
@@ -491,11 +670,15 @@
 				EF59A0D3295F76EE00EDB7C6 /* GetAllTableViewController.swift in Sources */,
 				EF7D60A4295CAAA8006512E8 /* ViewController.swift in Sources */,
 				EF7D60BF295CF4A2006512E8 /* Producto.swift in Sources */,
+				EFA2E44C2979A6B500473CF4 /* GetAllAreaViewController.swift in Sources */,
+				EF30CA832975B7CF00A843CB /* GetAllAreaCollectionViewController.swift in Sources */,
 				EFBB178A297231C800FBDB2B /* ProductoVentasCollectionViewCell.swift in Sources */,
 				EF7D60C5295D1687006512E8 /* Proveedor.swift in Sources */,
 				EF7D60A0295CAAA8006512E8 /* AppDelegate.swift in Sources */,
 				EF8BCFB4296BCF630085E955 /* DepartamentoTableViewCell.swift in Sources */,
+				EF30CA892975FAEB00A843CB /* GetByIdDepartamentoCollectionViewController.swift in Sources */,
 				EF80026D29708B2200A2B3EB /* AreaViewModel.swift in Sources */,
+				EFCAF2CC2979D2AE002F6D5A /* FirebaseViewModel.swift in Sources */,
 				EF8BCFA6296BA6770085E955 /* GetAllDepartamentoTableViewController.swift in Sources */,
 				EF8BCFAA296BABCB0085E955 /* DepartamentoViewModel.swift in Sources */,
 				EF59A0D6295F773A00EDB7C6 /* ProductoTableViewCell.swift in Sources */,
@@ -506,13 +689,44 @@
 				EF7D60C7295D16D0006512E8 /* Departamento.swift in Sources */,
 				EF8BCFA4296BA5CF0085E955 /* DepartamentoViewController.swift in Sources */,
 				EF7D60C3295CF5EB006512E8 /* ProductoViewModel.swift in Sources */,
+				EF30CA862975D92700A843CB /* GetByIdAreaCollectionViewController.swift in Sources */,
 				EF8002692970884200A2B3EB /* ProveedorViewModel.swift in Sources */,
 				EF7D60C9295D16E6006512E8 /* Area.swift in Sources */,
 				EF7D60A2295CAAA8006512E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFA9CCD3297724540052D6C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA9CCDA297724540052D6C4 /* OdiazEcommerceUITests.swift in Sources */,
+				EFA9CCDC297724540052D6C4 /* OdiazEcommerceUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA9CCE2297724740052D6C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA9CCE9297724740052D6C4 /* OdiazEcommerceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFA9CCDE297724540052D6C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF7D609B295CAAA8006512E8 /* OdiazEcommerce */;
+			targetProxy = EFA9CCDD297724540052D6C4 /* PBXContainerItemProxy */;
+		};
+		EFA9CCEB297724740052D6C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF7D609B295CAAA8006512E8 /* OdiazEcommerce */;
+			targetProxy = EFA9CCEA297724740052D6C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EF7D60A5295CAAA8006512E8 /* Main.storyboard */ = {
@@ -567,7 +781,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -656,6 +870,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 29MPKB7M6L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OdiazEcommerce/Info.plist;
@@ -708,6 +923,78 @@
 			};
 			name = Release;
 		};
+		EFA9CCE0297724540052D6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29MPKB7M6L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digi01.OdiazEcommerceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OdiazEcommerce;
+			};
+			name = Debug;
+		};
+		EFA9CCE1297724540052D6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29MPKB7M6L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digi01.OdiazEcommerceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OdiazEcommerce;
+			};
+			name = Release;
+		};
+		EFA9CCED297724740052D6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29MPKB7M6L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digi01.OdiazEcommerceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OdiazEcommerce.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OdiazEcommerce";
+				USER_HEADER_SEARCH_PATHS = "/Users/macbookmba8/Documents/DIAZ\\ MUÑOZ\\ OMAR/Ecommerce/OdiazEcommerce";
+			};
+			name = Debug;
+		};
+		EFA9CCEE297724740052D6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29MPKB7M6L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digi01.OdiazEcommerceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OdiazEcommerce.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OdiazEcommerce";
+				USER_HEADER_SEARCH_PATHS = "/Users/macbookmba8/Documents/DIAZ\\ MUÑOZ\\ OMAR/Ecommerce/OdiazEcommerce";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -725,6 +1012,24 @@
 			buildConfigurations = (
 				EF7D60B4295CAAAC006512E8 /* Debug */,
 				EF7D60B5295CAAAC006512E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFA9CCDF297724540052D6C4 /* Build configuration list for PBXNativeTarget "OdiazEcommerceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA9CCE0297724540052D6C4 /* Debug */,
+				EFA9CCE1297724540052D6C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFA9CCEC297724740052D6C4 /* Build configuration list for PBXNativeTarget "OdiazEcommerceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA9CCED297724740052D6C4 /* Debug */,
+				EFA9CCEE297724740052D6C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

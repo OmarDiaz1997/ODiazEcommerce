@@ -9,9 +9,11 @@ import UIKit
 
 class VentasCardCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var AreaImageView: UIImageView!
+    @IBOutlet weak var AreaCell: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
 }

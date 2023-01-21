@@ -10,5 +10,6 @@ pod 'SwipeCellKit'
 pod 'iOSDropDown'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'FirebaseCrashlytics'
 
 end
