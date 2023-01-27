@@ -61,6 +61,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVO-Kr-eij">
+                                <rect key="frame" x="97" y="65" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="cart.fill.badge.plus" catalog="system">
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -79,6 +87,7 @@
                 <constraint firstItem="NKE-3v-2ZD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uPU-No-U4d"/>
             </constraints>
             <connections>
+                <outlet property="AgregarCarritoButton" destination="MVO-Kr-eij" id="xvm-w4-09r"/>
                 <outlet property="DescripcionText" destination="SCN-6c-lAw" id="Mpq-wy-ZA1"/>
                 <outlet property="NombreText" destination="d0C-VK-OHu" id="nN4-g4-p9J"/>
                 <outlet property="PrecioUnitarioText" destination="9sX-ne-Tne" id="nZe-SZ-GLX"/>
@@ -90,8 +99,12 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="cart.fill.badge.plus" catalog="system" width="128" height="105"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

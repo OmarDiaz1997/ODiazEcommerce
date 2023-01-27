@@ -1,9 +1,12 @@
 import UIKit
 //private let reuseIdentifier = "Cell"
 class GetByIdDepartamentoCollectionViewController: UICollectionViewController {
+    let ventaProductoViewModel = VentaProductoCar()
+    var producto = VentaProductoCarrito()
     let productoViewModel = ProductoViewModel()
     var productos = [Producto]()
     var idDepartamento : Int = 2
+    var idProducto : Int32! = nil
     var busqueda : String = "MacBoock"
 
     override func viewDidLoad() {
@@ -108,8 +111,38 @@ class GetByIdDepartamentoCollectionViewController: UICollectionViewController {
         cell.PrecioUnitarioText.text = String(productos[indexPath.row].PrecioUnitario)
         cell.StockText.text = String(productos[indexPath.row].Stock)
         cell.DescripcionText.text = productos[indexPath.row].Descripcion
+        cell.AgregarCarritoButton.addTarget(self,
+                                            action: #selector(agregar),
+                                            for: .touchUpInside)
+        cell.AgregarCarritoButton.tag = indexPath.row
     
         return cell
+    }
+    
+    @objc func agregar(sender: UIButton){
+        print(sender.tag)
+        let idProducto = self.productos[sender.tag].IdProducto
+        //addCarrito(IdProducto: 3)
+        print(idProducto)
+        
+    }
+    
+    func addCarrito(IdProducto : Int){
+        //ventaProductoViewModel.Add(carrito: )
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.idProducto = Int32(productos[indexPath.row].IdProducto)
+        self.performSegue(withIdentifier: "DetallesSegue", sender: self)
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetallesSegue"{
+            let id = segue.destination as! DetallesViewController
+            id.idProducto = self.idProducto
+        }
     }
 
 

@@ -1,16 +1,12 @@
-//
-//  ProductoViewModel.swift
-//  OdiazEcommerce
-//
-//  Created by MacbookMBA8 on 28/12/22.
-//
-
 import Foundation
 import SQLite3
+import CoreData
+import UIKit
 
 class ProductoViewModel {
     
     let ProductoModel : Producto? = nil
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     /*---------  ADD   --------*/
     func Add(producto : Producto) -> Result{
@@ -151,8 +147,6 @@ class ProductoViewModel {
           var statement : OpaquePointer? = nil
           do{
               if try sqlite3_prepare_v2(context.db, query, -1, &statement, nil) == SQLITE_OK{
-                  
-                  result.Objects = []
                   while sqlite3_step(statement) == SQLITE_ROW{
                       var producto = Producto()
                       producto.IdProducto = Int(sqlite3_column_int(statement, 0))
@@ -160,10 +154,12 @@ class ProductoViewModel {
                       producto.PrecioUnitario =   Double(sqlite3_column_double(statement, 2))
                       producto.Stock =   Int(sqlite3_column_int(statement, 3))
                       producto.Descripcion =   String(cString: sqlite3_column_text(statement, 4))
+                      producto.Proveedor = Proveedor()
                       producto.Proveedor!.IdProveedor = Int(sqlite3_column_int(statement, 5))
+                      producto.Departamento = Departamento()
                       producto.Departamento!.IdDepartamento = Int(sqlite3_column_int(statement, 6))
                       
-                      result.Objects?.append(producto)
+                      result.Object = producto
                   }
                   result.Correct = true
               }
@@ -250,4 +246,10 @@ class ProductoViewModel {
           }
           return result
     }
+    
+    
+
+    
+    
+    
 }

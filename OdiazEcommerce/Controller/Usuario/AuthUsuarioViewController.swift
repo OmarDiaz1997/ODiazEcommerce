@@ -15,6 +15,8 @@ class AuthUsuarioViewController: UIViewController {
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var SingUpButton: UIButton!
     
+    @IBOutlet weak var RegisterButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,10 +26,28 @@ class AuthUsuarioViewController: UIViewController {
     }
     
     @IBAction func SingInActionButton(_ sender: UIButton) {
+
+        //FirebaseViewModel.shared.
+    }
+    
+    @IBAction func RegiterButtonAction(_ sender: UIButton) {
+        guard let email = EmailTextField.text else { return }
+        guard let pass = PasswordTextField.text else { return }
     }
     
 
     @IBAction func LogInButtonAction(_ sender: UIButton) {
+        guard let email = EmailTextField.text else { return }
+        guard let pass = PasswordTextField.text else { return }
+        FirebaseViewModel.shared.Login(emai: email, pass: pass){(done) in
+            if done {
+                self.next(identificador: "LogIn")
+            }
+        }
+    }
+    
+    func next(identificador : String){
+        performSegue(withIdentifier: identificador, sender: self)
     }
     
 }
